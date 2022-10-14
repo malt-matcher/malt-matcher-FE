@@ -1,4 +1,4 @@
-import "MaltFinderContainer.css";
+import "./MaltFinderContainer.css";
 import React from "react";
 
 const MaltFinderContainer = () => {
