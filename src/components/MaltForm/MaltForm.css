@@ -19,10 +19,6 @@ select {
   text-align: center;
 }
 
-.button-container {
-  /* transform: translateY(-10em); */
-}
-
 .form-button {
   width: 15em;
   height: 3em;
