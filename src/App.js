@@ -15,15 +15,14 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      {/* <Switch>
+      <Switch>
         <Route exact path='/' render={() => <LandingPage/>}/>
         <Route exact path='/maltFinder' render={() => <MaltFinderContainer/>}/>
         <Route exact path='/search/:breweryLocations' render={() => <BreweriesContainer/>}/>
         <Route exact path='/search/:breweryLocations/:selectedBrewery' render={() => <BeerListContainer/>}/>
         <Route exact path='/search/:breweryLocations/:selectedBrewery/details' render={() => <BreweryDetails/>}/>
         <Route render={() => <ErrorPage/>}/>
-      </Switch> */}
-      <BreweriesContainer />
+      </Switch>
       <Footer />
     </div>
   );
