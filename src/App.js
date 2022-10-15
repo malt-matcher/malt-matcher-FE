@@ -1,3 +1,4 @@
+import logo from './logo.svg';
 import './App.css';
 
 import NavBar from './components/NavBar/NavBar';
@@ -18,9 +19,9 @@ function App() {
       <Switch>
         <Route exact path='/' render={() => <LandingPage/>}/>
         <Route exact path='/maltFinder' render={() => <MaltFinderContainer/>}/>
-        <Route exact path='/search/:breweryLocations' render={() => <BreweryLocationContainer/>}/>
-        <Route exact path='/search/:breweryLocations/:selectedBrewery' render={() => <BeerListContainer/>}/>
-        <Route exact path='/search/:breweryLocations/:selectedBrewery/details' render={() => <BreweryDetails/>}/>
+        <Route exact path='/:breweryLocations' render={() => <BreweryLocationContainer/>}/>
+        <Route exact path='/:breweryLocations/:selectedBrewery' render={() => <BeerListContainer/>}/>
+        <Route exact path='/:breweryLocations/:selectedBrewery/details' render={() => <BreweryDetails/>}/>
         <Route render={() => <ErrorPage/>}/>
       </Switch>
       <Footer />
