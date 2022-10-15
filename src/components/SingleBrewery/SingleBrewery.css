@@ -1,0 +1,19 @@
+.single-brewery-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff897;
+  width: 40%;
+  /* transform: translateY(-38em); */
+  margin-bottom: 25px;
+  border-radius: 35px;
+  box-shadow: 0 0 20px black;
+}
+
+.brewery-image-container {
+  width: 50%;
+  padding: 0;
+}
+
+.beer-image {
+  width: 30%;
+}
