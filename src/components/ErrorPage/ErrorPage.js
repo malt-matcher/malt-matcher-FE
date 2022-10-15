@@ -6,8 +6,8 @@ import spilled from "../../assets/spilled.jpeg";
 
 const ErrorPage = () => {
   return (
-    <div className="container">
-      <h2>Party Foul! Invalid URL. Please click button below to return home</h2>
+    <div className="error-container">
+      <h2>Party Foul! Invalid URL. Please click button below to return home.</h2>
       <div className="img-container">
         <img src={spilled} className="spilled-image" alt='spilled-beer' />
       </div>

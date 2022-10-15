@@ -1,7 +1,15 @@
+h2 {
+  font-size: 30px;
+}
+
 .spilled-image {
   border-radius: 35px;
   opacity: 0.9;
   box-shadow: 0 0 20px black;
+}
+
+.error-container {
+  margin-top: 100px;
 }
 
 .home-button {
@@ -9,9 +17,10 @@
   height: 3em;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 20px;
   background-color: #f28e1c;
   border: none;
+  margin-top: 50px;
 }
 
 .home-button:hover {
