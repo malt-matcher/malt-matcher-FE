@@ -7,7 +7,7 @@ const MaltFinderContainer = () => {
   return (
     <div className="container">
       <div className="img-container">
-        <img src={bar} className="bar-image" />
+        <img src={bar} className="bar-image" alt="bar"/>
       </div>
       <MaltForm />
     </div>
