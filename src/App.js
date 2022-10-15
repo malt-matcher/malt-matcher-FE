@@ -8,13 +8,13 @@ import BreweryDetails from './components/BreweryDetails/BreweryDetails';
 import Footer from './components/Footer/Footer';
 import ErrorPage from './components/ErrorPage/ErrorPage'
 import LandingPage from './components/LandingPage/LandingPage'
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Link} from 'react-router-dom';
 
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Link to='/'><NavBar /></Link>
       <Switch>
         <Route exact path='/' render={() => <LandingPage/>}/>
         <Route exact path='/maltFinder' render={() => <MaltFinderContainer/>}/>
