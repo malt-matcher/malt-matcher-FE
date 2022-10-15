@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+
 import NavBar from './components/NavBar/NavBar';
 import MaltFinderContainer from './components/MaltFinderContainer/MaltFinderContainer';
 import BreweryLocationContainer from './components/BreweryLocationContainer/BreweryLocationContainer';
@@ -9,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import ErrorPage from './components/ErrorPage/ErrorPage'
 import LandingPage from './components/LandingPage/LandingPage'
 import {Route, Switch} from 'react-router-dom';
+
 
 function App() {
   return (
