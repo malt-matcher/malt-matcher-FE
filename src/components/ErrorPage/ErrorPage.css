@@ -1,3 +1,11 @@
+h2 {
+  margin-top: 8%;
+}
+
+.container {
+  height: 100%;
+}
+
 .spilled-image {
   border-radius: 35px;
   opacity: 0.9;
@@ -12,13 +20,14 @@
   font-size: 15px;
   background-color: #f28e1c;
   border: none;
+  margin-top: 2%;
 }
 
 .home-button:hover {
-  box-shadow: inset 0 0 10px #fff897;
+  background-color: #f28e1c;
+  box-shadow: inset 0 0 10px #624a2e;
 }
 
 .home-button:active {
-  background-color: #f6c101;
-  box-shadow: inset 0 0 10px #624a2e;
+  box-shadow: inset 0 0 10px #f28e1c;
 }
