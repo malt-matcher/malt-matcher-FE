@@ -1,0 +1,19 @@
+.greeting {
+display: flex;
+flex-direction: column;
+ width: 50vw;
+ height: 70vh;
+ justify-content: space-evenly;
+}
+
+.home-container {
+  display: flex;
+  align-items: flex-start;
+  height: 100vh;
+  margin-top: 150px;
+  justify-content: center;
+}
+
+.greeting-msg {
+  font-size: 25px;
+}
