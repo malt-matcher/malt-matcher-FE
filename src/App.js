@@ -10,8 +10,6 @@ import ErrorPage from "./components/ErrorPage/ErrorPage";
 import LandingPage from "./components/LandingPage/LandingPage";
 import { Route, Switch, Link } from "react-router-dom";
 
-import AboutUs from "./components/AboutUs/AboutUs";
-
 function App() {
   return (
     <div className="App">
