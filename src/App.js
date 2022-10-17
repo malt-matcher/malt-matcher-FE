@@ -26,7 +26,7 @@ function App() {
         <Route render={() => <ErrorPage/>}/>
       </Switch>
       // <AboutUs />
-      /* <Footer /> */
+      // <Footer />
     </div>
   );
 }
