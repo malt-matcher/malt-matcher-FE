@@ -1,5 +1,6 @@
 .navbar-container {
   display: flex;
+  align-items: center;
   color: #624a2e;
   margin-left: 1%;
   margin-top: 0;
@@ -7,6 +8,16 @@
   position: fixed;
   top: 0;
   z-index: 1;
+}
+
+.malt-matcher {
+  display: flex;
+  margin-right: 51em;
+}
+
+.about-us-container {
+  display: flex;
+  align-items: center;
 }
 
 .malt, .matcher {
@@ -21,4 +32,9 @@
 
 .matcher {
   background-color: #f28e1c;
+}
+
+.about {
+  color:#624a2e;
+  z-index: 1;
 }
