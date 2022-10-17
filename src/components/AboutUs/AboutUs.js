@@ -38,7 +38,7 @@ const AboutUs = () => {
         <div className="member-container">
           <div className="name-and-picture-container">
             <p className="name">Andrew Miller<br></br>( FE )</p>
-            <img src={Andrew} alt="profile-picture" className="profile"/>
+            <img src={Andrew} alt="profile" className="profile"/>
           </div>
           <div className="linkedin-and-github">
             <a
@@ -55,7 +55,7 @@ const AboutUs = () => {
         <div className="member-container">
           <div className="name-and-picture-container">
             <p className="name">Bryan Shears<br></br>( BE )</p>
-            <img src={Bryan} alt="profile-picture" className="profile"/>
+            <img src={Bryan} alt="profile" className="profile"/>
           </div>
           <div className="linkedin-and-github">
             <a
@@ -72,7 +72,7 @@ const AboutUs = () => {
         <div className="member-container">
           <div className="name-and-picture-container">
             <p className="name">Bryce Simonds<br></br>( BE )</p>
-            <img src={Bryce} alt="profile-picture" className="profile"/>
+            <img src={Bryce} alt="profile" className="profile"/>
           </div>
           <div className="linkedin-and-github">
             <a
@@ -89,7 +89,7 @@ const AboutUs = () => {
         <div className="member-container">
           <div className="name-and-picture-container">
             <p className="name">Cole Stephenson<br></br>( FE )</p>
-            <img src={Cole} alt="profile-picture" className="profile"/>
+            <img src={Cole} alt="profile" className="profile"/>
           </div>
           <div className="linkedin-and-github">
             <a
@@ -106,7 +106,7 @@ const AboutUs = () => {
         <div className="member-container">
           <div className="name-and-picture-container">
             <p className="name">Jordan Farelli<br></br>( FE )</p>
-            <img src={Jordan} alt="profile-picture" className="profile"/>
+            <img src={Jordan} alt="profile" className="profile"/>
           </div>
           <div className="linkedin-and-github">
             <a
@@ -123,7 +123,7 @@ const AboutUs = () => {
         <div className="member-container">
           <div className="name-and-picture-container">
             <p className="name">Parker Thompson<br></br>( BE )</p>
-            <img src={Parker} alt="profile-picture" className="profile"/>
+            <img src={Parker} alt="profile" className="profile"/>
           </div>
           <div className="linkedin-and-github">
             <a
@@ -140,7 +140,7 @@ const AboutUs = () => {
         <div className="member-container">
           <div className="name-and-picture-container">
             <p className="name">Thiago Silveira<br></br>( BE )</p>
-            <img src={Thiago} alt="profile-picture" className="profile"/>
+            <img src={Thiago} alt="profile" className="profile"/>
           </div>
           <div className="linkedin-and-github">
             <a
