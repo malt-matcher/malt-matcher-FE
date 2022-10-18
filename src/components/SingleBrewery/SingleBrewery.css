@@ -1,19 +1,70 @@
 .single-brewery-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: #fff897;
   width: 40%;
   /* transform: translateY(-38em); */
+  margin-top: 2px;
   margin-bottom: 25px;
   border-radius: 35px;
-  box-shadow: 0 0 20px black;
+  box-shadow: inset 0 0 10px black;
 }
 
-.brewery-image-container {
+.single-brewery-container:hover {
+  cursor: pointer;
+  background-color: #f28e1c;
+  box-shadow: inset 0 0 15px black;
+}
+
+.brewery-name {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+a:link {
+  color: black;
+  /* background-color: transparent; */
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.brewery-distance {
+  margin-bottom: 2px;
+}
+
+/* .brewery-image-container {
   width: 50%;
   padding: 0;
+} */
+
+/* .beer-image {
+  width: 30%;
+} */
+
+.facebook-instagram-twitter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 20%;
+  padding: 2px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.beer-image {
-  width: 30%;
+.faceboodAnchor,
+.instagramAnchor,
+.twitterAnchor {
+  width: 20px;
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(216deg)
+    brightness(108%) contrast(101%);
+  margin: 3px 5px 0px 5px;
 }

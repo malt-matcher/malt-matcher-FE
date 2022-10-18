@@ -1,5 +1,5 @@
 import "./BreweryDetails";
-import React from "react";
+// import React from "react";
 
 const BreweryDetails = () => {
   return <div></div>;

@@ -1,19 +1,26 @@
-.greeting {
-display: flex;
-flex-direction: column;
- width: 50vw;
- height: 70vh;
- justify-content: space-evenly;
-}
-
 .home-container {
   display: flex;
-  align-items: flex-start;
-  height: 100vh;
-  margin-top: 150px;
-  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  margin-top: 8%;
+  justify-content: space-evenly;
+  /* margin-right: 10%; */
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 70vh;
+  justify-content: space-evenly;
+}
+
+.welcome {
+  margin-bottom: -7%;
+  font-size: 3.25em;
 }
 
 .greeting-msg {
   font-size: 25px;
+  
 }

@@ -1,25 +1,32 @@
 .breweries-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1.25%;
 }
 
 .singles {
   overflow-y: scroll;
-  height: 30%;
-  transform: translateY(-120%);
+  height: 78%;  
+  transform: translateY(-104%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* margin-top: 10px; */
+}
+
+.singles::-webkit-scrollbar {
+  display: none;
+}
+
+.bars-image-container {
+  height: 100vh;
 }
 
 .bars-image {
   height: 40em;
   width: 70em;
   margin: auto;
-  margin-top: 6%;
+  margin-top: 8%;
   border-radius: 35px;
   opacity: 0.5;
   box-shadow: 0 0 10px black;
