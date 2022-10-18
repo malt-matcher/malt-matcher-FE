@@ -1,5 +1,5 @@
 import "./LandingPage.css";
-import React from "react";
+// import React from "react";
 import cheers from "../../assets/cheers.webp";
 import {Link} from 'react-router-dom'
 
@@ -8,7 +8,7 @@ const LandingPage = () => {
   return (
     <div className="home-container">
       <div className='greeting'>
-        <h1>Welcome To MaltMatcher!</h1>
+        <h1 className="welcome">Welcome To MaltMatcher!</h1>
         <h2 className='greeting-msg'>{greeting}</h2>
         <Link to='/maltfinder'><button className='home-button'>Find Some Brews!</button></Link>
       </div>

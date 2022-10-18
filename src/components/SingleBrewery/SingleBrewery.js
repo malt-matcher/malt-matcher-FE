@@ -1,17 +1,47 @@
 import "./SingleBrewery.css";
-import React from "react";
-import PBR from "../../assets/nikos.png";
+// import PBR from "../../assets/nikos.png";
+import {
+  AiFillFacebook,
+  AiFillInstagram,
+  AiOutlineTwitter,
+} from "react-icons/ai";
 
-const SingleBrewery = () => {
+const SingleBrewery = ({
+  id,
+  name,
+  distanceFromUser,
+  address,
+  website,
+  facebook,
+  instagram,
+  twitter,
+}) => {
   return (
     <div className="single-brewery-container">
-      <div className="brewery-image-container">
-        <img src={PBR} alt='beer' className='beer-image'/>
-      </div>
+      {/* <div className="brewery-image-container">
+        <img src={PBR} alt="beer" className="beer-image" />
+      </div> */}
       <div className="brewery-info-container">
-        <p className="brewery-name">Niko's Tavern</p>
-        <p className="brewery-distance">13.5 Miles</p>
-        <p className="brewery-location">http://mapquest.link</p>
+        <p className="brewery-name">
+          <a href={website}>{name}</a>
+        </p>
+        {distanceFromUser < 2 ? (
+          <p className="brewery-distance">{distanceFromUser} mile away</p>
+        ) : (
+          <p className="brewery-distance">{distanceFromUser} miles away</p>
+        )}
+        <p className="brewery-location">{address}</p>
+      </div>
+      <div className="facebook-instagram-twitter">
+        <a className="faceboodAnchor" href={facebook}>
+          <AiFillFacebook />
+        </a>
+        <a className="instagramAnchor" href={instagram}>
+          <AiFillInstagram />
+        </a>
+        <a className="twitterAnchor" href={twitter}>
+          <AiOutlineTwitter />
+        </a>
       </div>
     </div>
   );

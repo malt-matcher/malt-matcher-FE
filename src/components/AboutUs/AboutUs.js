@@ -8,7 +8,7 @@ import Jordan from "../../assets/jordan.jpeg";
 import Parker from "../../assets/parker.jpeg";
 import Thiago from "../../assets/thiago.jpeg";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import React from "react";
+// import React from "react";
 
 const AboutUs = () => {
   return (

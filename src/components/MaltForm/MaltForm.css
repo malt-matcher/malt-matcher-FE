@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transform: translateY(-10em);
+  /* justify-content: center; */
+  transform: translateY(-7em);
+  height: 10vh;
 }
 
 .dropdown-container {
