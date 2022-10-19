@@ -1,6 +1,14 @@
 import "./MaltForm.css";
+import {Link} from 'react-router-dom'
 
-const MaltForm = () => {
+const MaltForm = ({displayBreweries}) => {
+    
+  const handleDropDownChange = (e) => {
+    e.preventDefault();
+    console.log('E.TARGET.VALUE: ', e.target.value);
+    displayBreweries(e.target.value);
+  };
+
   return (
     <form className="form-container">
       <div className="dropdown-container">
@@ -16,10 +24,10 @@ const MaltForm = () => {
           <option value="Sour">Sour</option>
           <option value="Stout">Stout</option>
         </select>
-        <select placeholder="City">
+        <select placeholder="City" onChange={handleDropDownChange}>
           City
           <option value="">Select a City</option>
-          <option value="Arvade">Arvade</option>
+          <option value="Arvada">Arvada</option>
           <option value="Aurora">Aurora</option>
           <option value="Denver">Denver</option>
           <option value="Golden">Golden</option>
@@ -39,7 +47,7 @@ const MaltForm = () => {
         </select>
       </div>
       <div className="button-container">
-        <button className="form-button">Show Me Breweries</button>
+        <Link to='/foo'><button className="form-button" onChange={handleDropDownChange}>Show Me Breweries</button></Link>
       </div>
     </form>
   );

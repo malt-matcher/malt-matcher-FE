@@ -12,29 +12,54 @@ import { GET_BREWERIES } from "../../malt-matcher-FE/src/utilities/queries";
 import { useEffect, useState } from "react";
 
 function App() {
-  let { data, loading, error } = useQuery(
+  // let { data, loading, error } = useQuery(
+  let { data } = useQuery(
     GET_BREWERIES
     // {
     // location: "Montrose, CO",
     // radius: "100",
     // }
   );
-  // Possibly add a Loading component to show while breweries/beers are loading (Spinner animation, or simple h1 tag)...
-  //if (loading) console.log("Loading...") && <Loading />;
-  if (loading) console.log("Loading...");
-  if (error) console.log("error!", error.message);
 
-  console.log("DATA: ", data);
+  // const { data } = useQuery(GET_BREWERIES, {
+	// 	variables: {
+	// 		location: location,
+	// 	}
+	// })
+
+  // Possibly add a Loading component to show while breweries/beers are loading (Spinner animation, or simple h1 tag)...
+  // if (loading) console.log("Loading...") && <Loading />;
+  // if (loading) console.log("Loading...");
+  // if (error) console.log("error!", error.message);
+
+  // console.log("DATA: ", data);
 
   const [breweries, setBreweries] = useState([]);
+  const [singleBrewery, setSingleBrewery] = useState([]);
 
-  useEffect(() => {
-    if (!loading) {
-      setBreweries(data.breweries);
-    }
-  }, [loading, data]);
+  const displaySingleBrewery = (selectedBrewery) => {
+    const breweryPick = data.breweries.find((brewery) => brewery.catalogBreweryId === selectedBrewery);
+    console.log("BREWERYPICK", breweryPick)
+    setSingleBrewery(breweryPick);
+  };
 
-  console.log("BREWERIES: ", breweries);
+  // useEffect(() => {
+  //   if (!loading) {
+  //     setBreweries(displayBreweries);
+  //   }
+  // }, [loading, data]);
+
+  // console.log("BREWERIES: ", breweries);
+  
+  const displayBreweries = (city) => {
+    let filteredBreweries = data.breweries.filter(
+      (brewery) => brewery.address.includes(city)
+      );
+      console.log('CITY: ', city);
+    setBreweries(filteredBreweries);
+    console.log("FILTERED BREWERIES: ", filteredBreweries)
+  };
+
 
   return (
     <div className="App">
@@ -46,12 +71,14 @@ function App() {
         <Route
           exact
           path="/maltFinder"
-          render={() => <MaltFinderContainer />}
+          // render={() => data && <MaltFinderContainer breweryData={data.breweries} />}
+          render={() => <MaltFinderContainer displayBreweries={displayBreweries}/>}
         />
         <Route
           exact
-          path="/search/:breweryLocations"
-          render={() => <BreweriesContainer breweries={breweries} />}
+          path="/foo"
+          // render={() => data && <BreweriesContainer breweryData={data.breweries} />}
+          render={() => data && <BreweriesContainer breweries={breweries} displaySingleBrewery={displaySingleBrewery}/>}
         />
         <Route
           exact
@@ -60,8 +87,9 @@ function App() {
         />
         <Route
           exact
-          path="/search/:breweryLocations/:selectedBrewery/details"
-          render={() => <BreweryDetails />}
+          path="/foos"
+          // path='/:breweryLocations/:selectedBrewery/details'
+          render={() => data && <BreweryDetails singleBrewery={singleBrewery}/>}
         />
         <Route render={() => <ErrorPage />} />
       </Switch>
