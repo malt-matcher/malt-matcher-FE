@@ -1,5 +1,6 @@
 import "./SingleBrewery.css";
 // import PBR from "../../assets/nikos.png";
+import {Link} from 'react-router-dom'
 import {
   AiFillFacebook,
   AiFillInstagram,
@@ -15,6 +16,7 @@ const SingleBrewery = ({
   facebook,
   instagram,
   twitter,
+  displaySingleBrewery
 }) => {
   return (
     <div className="single-brewery-container">
@@ -23,14 +25,14 @@ const SingleBrewery = ({
       </div> */}
       <div className="brewery-info-container">
         <p className="brewery-name">
-          <a href={website}>{name}</a>
+          <a className="website-anchor" href={website}>{name}</a>
         </p>
         {distanceFromUser < 2 ? (
           <p className="brewery-distance">{distanceFromUser} mile away</p>
         ) : (
           <p className="brewery-distance">{distanceFromUser} miles away</p>
         )}
-        <p className="brewery-location">{address}</p>
+        <Link to='/foos'><p className="brewery-location" onClick={() => displaySingleBrewery(id)}><a href={address} className='location-anchor'>{address}</a></p></Link>
       </div>
       <div className="facebook-instagram-twitter">
         <a className="faceboodAnchor" href={facebook}>
