@@ -21,8 +21,16 @@ describe('Malt Matcher Page', () => {
   beforeEach(() => {
     //intercept will go here//
     //reference https://www.youtube.com/watch?v=sTfmURpY20I for setup
-    cy.visit('http://localhost:3000/maltfinder')
-    cy.get()
+    // cy.intercept('POST', 'https://89c5da8f-5879-4c3a-959f-101eb08a1724.mock.pstmn.io/graphql', (req) => {
+    //   if(req.body.operationName === 'GET_BREWERIES'){
+    //     req.alias = 'GET_BREWERIES'
+    //     req.continue()
+    //   }
+    // })
+    // cy.visit('http://localhost:3000/maltfinder')
+    // cy.wait('@GET_BREWERIES')
+    // confirm that GET_BREWERIES is the operationName in the `Network` tab and adjust if needed.
+    
     // cy.get('select[class=]').select('IPA') add classList to dropdowns
     // cy.get('select[class=]').select('Littleton') add classList to dropdowns
     // cy.get('select[class=]').select('5') add classList to dropdowns
