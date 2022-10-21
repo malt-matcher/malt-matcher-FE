@@ -16,7 +16,8 @@ const SingleBrewery = ({
   facebook,
   instagram,
   twitter,
-  displaySingleBrewery
+  beers,
+  setBeers
 }) => {
   return (
     <div className="single-brewery-container">
@@ -32,7 +33,7 @@ const SingleBrewery = ({
         ) : (
           <p className="brewery-distance">{distanceFromUser} miles away</p>
         )}
-        <Link to='/foos'><p className="brewery-location" onClick={() => displaySingleBrewery(id)}><a href={address} className='location-anchor'>{address}</a></p></Link>
+        <Link to={`/search/${name}`}><button className="brewery-location" onClick={() => setBeers(beers)}>Show me da beers</button></Link>
       </div>
       <div className="facebook-instagram-twitter">
         <a className="faceboodAnchor" href={facebook}>

@@ -22,6 +22,7 @@ function App() {
   const [location, setLocation] = useState('');
   const [radius, setRadius] = useState('');
   const [style, setStyle] = useState('');
+  const [beers, setBeers] = useState([])
 
   return (
     <div className="App">
@@ -38,12 +39,12 @@ function App() {
         <Route
           exact
           path="/search"
-          render={() => <BreweriesContainer location={location} radius={radius} style={style}/>}
+          render={() => <BreweriesContainer location={location} radius={radius} style={style} setBeers={setBeers}/>}
         />
         <Route
           exact
           path="/search/:selectedBrewery"
-          render={() => <BeerListContainer />}
+          render={() => <BeerListContainer beerList={beers} />}
         />
         <Route
           exact
