@@ -1,7 +1,9 @@
 import "./BeerListContainer.css";
 // import React from "react";
 
-const BeerListContainer = () => {
+const BeerListContainer = ({beerList}) => {
+
+  console.log(beerList)
   return <div></div>;
 };
 
