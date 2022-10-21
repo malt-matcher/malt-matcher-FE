@@ -1,18 +1,12 @@
 import "./MaltForm.css";
 import {Link} from 'react-router-dom'
 
-const MaltForm = ({displayBreweries}) => {
-    
-  const handleDropDownChange = (e) => {
-    e.preventDefault();
-    console.log('E.TARGET.VALUE: ', e.target.value);
-    displayBreweries(e.target.value);
-  };
+const MaltForm = ({setLocation, setRadius, setStyle}) => {
 
   return (
     <form className="form-container">
       <div className="dropdown-container">
-        <select placeholder="Beer Syle">
+        <select placeholder="Beer Syle" onChange={(event) => setStyle(event.target.value)}>
           Beer Style
           <option value="">Select a Brew Style</option>
           <option value="Amber">Amber</option>
@@ -24,30 +18,30 @@ const MaltForm = ({displayBreweries}) => {
           <option value="Sour">Sour</option>
           <option value="Stout">Stout</option>
         </select>
-        <select placeholder="City" onChange={handleDropDownChange}>
+        <select placeholder="City" onChange={(event) => {setLocation(event.target.value)}}>
           City
           <option value="">Select a City</option>
-          <option value="Arvada">Arvada</option>
-          <option value="Aurora">Aurora</option>
-          <option value="Denver">Denver</option>
-          <option value="Golden">Golden</option>
-          <option value="Littleton">Littleton</option>
-          <option value="Montrose">Montrose</option>
-          <option value="Thornton">Thornton</option>
+          <option value="Arvada, CO">Arvada</option>
+          <option value="Aurora, CO">Aurora</option>
+          <option value="Denver, CO">Denver</option>
+          <option value="Golden, CO">Golden</option>
+          <option value="Littleton, CO">Littleton</option>
+          <option value="Montrose, CO">Montrose</option>
+          <option value="Thornton, CO">Thornton</option>
         </select>
-        <select placeholder="Radius">
+        <select placeholder="Radius" onChange={(event) => setRadius(event.target.value)}>
           Radius
           <option value="">Select a Radius</option>
-          <option value="5 Miles">5 Miles</option>
-          <option value="10 Miles">10 Miles</option>
-          <option value="15 Miles">15 Miles</option>
-          <option value="20 Miles">20 Miles</option>
-          <option value="25 Miles">25 Miles</option>
-          <option value="50 Miles">50 Miles</option>
+          <option value="5">5 Miles</option>
+          <option value="10">10 Miles</option>
+          <option value="15">15 Miles</option>
+          <option value="20">20 Miles</option>
+          <option value="25">25 Miles</option>
+          <option value="50">50 Miles</option>
         </select>
       </div>
       <div className="button-container">
-        <Link to='/foo'><button className="form-button" onChange={handleDropDownChange}>Show Me Breweries</button></Link>
+        <Link to='/search'><button className="form-button" >Show Me Breweries</button></Link>
       </div>
     </form>
   );
