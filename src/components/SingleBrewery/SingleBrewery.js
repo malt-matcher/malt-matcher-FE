@@ -50,4 +50,4 @@ const SingleBrewery = ({
   );
 };
 
-export default SingleBrewery;
+export default SingleBrewery
