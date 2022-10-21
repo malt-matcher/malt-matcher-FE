@@ -1,36 +1,37 @@
 import "./BreweriesContainer.css";
 import bar from "../../assets/bar.jpg";
 import SingleBrewery from "../SingleBrewery/SingleBrewery";
+import Loading from "../Loading/Loading";
 import { useQuery, gql } from "@apollo/client";
 
 const BreweriesContainer = ({ location, radius, style }) => {
 
-  let selectedBreweries
+    let selectedBreweries
 
-  console.log(location, radius, style)
+    console.log(location, radius, style)
 
     const GET_BREWERIES = gql`
-    query breweries($location: String! $radius: String! $style: String!) {
-      breweries(location: $location radius: $radius style: $style) {
-        catalogBreweryId
-        name
-        address
-        distanceFromUser
-        website
-        instagram
-        facebook
-        twitter
-        breweryDescription
-        beers {
+      query breweries($location: String! $radius: String! $style: String!) {
+        breweries(location: $location radius: $radius style: $style) {
+          catalogBreweryId
           name
-          style
-          description
-          abv
-          ibu
+          address
+          distanceFromUser
+          website
+          instagram
+          facebook
+          twitter
+          breweryDescription
+          beers {
+            name
+            style
+            description
+            abv
+            ibu
+          }
         }
       }
-    }
-    `;
+      `;
 
     const { data } = useQuery(GET_BREWERIES, {
       variables: {
@@ -39,9 +40,6 @@ const BreweriesContainer = ({ location, radius, style }) => {
         style: style
       }
     });
-
-   
-
 
     if(data) {
        selectedBreweries = data.breweries.map((brewery) => {
@@ -62,14 +60,12 @@ const BreweriesContainer = ({ location, radius, style }) => {
     } else {
       console.log('Loading')
     }
- 
-  
 
   return (
     <div className="breweries-container">
       <div className="bars-image-container">
         <img src={bar} className="bars-image" alt="bar" />
-        <div className="singles">{selectedBreweries && selectedBreweries}</div>
+        <div className="singles">{selectedBreweries ?  selectedBreweries : <Loading />}</div>
       </div>
     </div>
   );
