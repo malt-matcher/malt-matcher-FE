@@ -6,40 +6,44 @@ import BeerListContainer from "./components/BeerListContainer/BeerListContainer"
 import BreweryDetails from "./components/BreweryDetails/BreweryDetails";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import LandingPage from "./components/LandingPage/LandingPage";
+import AboutUs from "./components/AboutUs/AboutUs";
 import { Route, Switch, Link } from "react-router-dom";
 import { useState } from "react";
 
-
-
 function App() {
 
-  // Possibly add a Loading component to show while breweries/beers are loading (Spinner animation, or simple h1 tag)...
-  // if (loading) console.log("Loading...") && <Loading />;
-  // if (loading) console.log("Loading...");
-  // if (error) console.log("error!", error.message);
-
-
-  const [location, setLocation] = useState('');
-  const [radius, setRadius] = useState('');
-  const [style, setStyle] = useState('');
-  const [beers, setBeers] = useState([])
+  const [location, setLocation] = useState("");
+  const [radius, setRadius] = useState("");
+  const [style, setStyle] = useState("");
+  const [beers, setBeers] = useState([]);
 
   return (
     <div className="App">
-      <Link to="/">
-        <NavBar />
-      </Link>
+      <NavBar />
       <Switch>
         <Route exact path="/" render={() => <LandingPage />} />
         <Route
           exact
           path="/maltFinder"
-          render={() => <MaltFinderContainer setLocation={setLocation} setRadius={setRadius} setStyle={setStyle}/>}
+          render={() => (
+            <MaltFinderContainer
+              setLocation={setLocation}
+              setRadius={setRadius}
+              setStyle={setStyle}
+            />
+          )}
         />
         <Route
           exact
           path="/search"
-          render={() => <BreweriesContainer location={location} radius={radius} style={style} setBeers={setBeers}/>}
+          render={() => (
+            <BreweriesContainer
+              location={location}
+              radius={radius}
+              style={style}
+              setBeers={setBeers}
+            />
+          )}
         />
         <Route
           exact
@@ -48,11 +52,17 @@ function App() {
         />
         <Route
           exact
-          path="/foos"
+          path="/details"
           // path='/:breweryLocations/:selectedBrewery/details'
-          render={() => <BreweryDetails/>}
+          render={() => <BreweryDetails />}
         />
-        <Route render={() => <ErrorPage />} />
+        <Route
+          exact
+          path="/about"
+          // path='/:breweryLocations/:selectedBrewery/details'
+          render={() => <AboutUs />}
+        />
+        <Route exact path="*" render={() => <ErrorPage />} />
       </Switch>
     </div>
   );

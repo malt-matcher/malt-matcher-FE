@@ -1,38 +1,48 @@
-h2 {
-
-  margin-top: 8%;
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.container {
-  height: 100%;
+.error-text-container {
+  transform: translateY(9em);
+  width: 80%;
+  z-index: 1;
+  height: 1vh;
+  color: #fff897;
+  text-shadow: 0 2px 3px #f28e1c;
+}
+
+.party-foul, .other-text {
+  margin: 0;
+  font-size: 3.5em;
 }
 
 .spilled-image {
+  height: 40em;
+  width: 70em;
   border-radius: 35px;
-  opacity: 0.9;
-  box-shadow: 0 0 20px black;
-}
-
-.error-container {
-  margin-top: 100px;
+  box-shadow: 0 0 10px black;
 }
 
 .home-button {
-  width: 15em;
-  height: 3em;
+  width: 8em;
+  height: 2em;
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
   background-color: #f28e1c;
   border: none;
-  margin-top: 2%;
+  z-index: 1;
+  transform: translateY(-55%);
 }
 
 .home-button:hover {
   background-color: #f28e1c;
-  box-shadow: inset 0 0 10px black;
+  box-shadow: inset 0 0 10px #fff897;
 }
 
 .home-button:active {
-  box-shadow: 0 0 10px black;
+  background-color: #f6c101;
+  box-shadow: inset 0 0 10px #624a2e;
 }

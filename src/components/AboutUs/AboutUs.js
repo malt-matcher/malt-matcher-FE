@@ -8,13 +8,12 @@ import Jordan from "../../assets/jordan.jpeg";
 import Parker from "../../assets/parker.jpeg";
 import Thiago from "../../assets/thiago.jpeg";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-// import React from "react";
 
 const AboutUs = () => {
   return (
     <div className="about-container">
       <div className="img-container">
-        <img src={bar} className="image" alt="bar"/>
+        <img src={bar} className="barback-image" alt="bar" />
       </div>
       <h1 className="about-text">
         Malt Matcher is the brain-child of Cole Stephenson, where a group of 7
@@ -37,8 +36,11 @@ const AboutUs = () => {
       <div className="team-container">
         <div className="member-container">
           <div className="name-and-picture-container">
-            <p className="name">Andrew Miller<br></br>( FE )</p>
-            <img src={Andrew} alt="profile" className="profile"/>
+            <div className="name-what-end-container">
+              <p className="name">Andrew Miller</p>
+              <p className="what-end">( FE )</p>
+            </div>
+            <img src={Andrew} alt="profile" className="profile" />
           </div>
           <div className="linkedin-and-github">
             <a
@@ -47,15 +49,21 @@ const AboutUs = () => {
             >
               <AiFillLinkedin />
             </a>
-            <a className="githubAnchor" href="https://github.com/andrewmiller45">
+            <a
+              className="githubAnchor"
+              href="https://github.com/andrewmiller45"
+            >
               <AiFillGithub />
             </a>
           </div>
         </div>
         <div className="member-container">
           <div className="name-and-picture-container">
-            <p className="name">Bryan Shears<br></br>( BE )</p>
-            <img src={Bryan} alt="profile" className="profile"/>
+            <div className="name-what-end-container">
+              <p className="name">Bryan Shears</p>
+              <p className="what-end">( BE )</p>
+            </div>
+            <img src={Bryan} alt="profile" className="profile" />
           </div>
           <div className="linkedin-and-github">
             <a
@@ -71,8 +79,11 @@ const AboutUs = () => {
         </div>
         <div className="member-container">
           <div className="name-and-picture-container">
-            <p className="name">Bryce Simonds<br></br>( BE )</p>
-            <img src={Bryce} alt="profile" className="profile"/>
+            <div className="name-what-end-container">
+              <p className="name">Bryce Simonds</p>
+              <p className="what-end">( BE )</p>
+            </div>
+            <img src={Bryce} alt="profile" className="profile" />
           </div>
           <div className="linkedin-and-github">
             <a
@@ -88,8 +99,11 @@ const AboutUs = () => {
         </div>
         <div className="member-container">
           <div className="name-and-picture-container">
-            <p className="name">Cole Stephenson<br></br>( FE )</p>
-            <img src={Cole} alt="profile" className="profile"/>
+            <div className="name-what-end-container">
+              <p className="name">Cole Stephenson</p>
+              <p className="what-end">( FE )</p>
+            </div>
+            <img src={Cole} alt="profile" className="profile" />
           </div>
           <div className="linkedin-and-github">
             <a
@@ -98,15 +112,21 @@ const AboutUs = () => {
             >
               <AiFillLinkedin />
             </a>
-            <a className="githubAnchor" href="https://github.com/colestephenson1">
+            <a
+              className="githubAnchor"
+              href="https://github.com/colestephenson1"
+            >
               <AiFillGithub />
             </a>
           </div>
         </div>
         <div className="member-container">
           <div className="name-and-picture-container">
-            <p className="name">Jordan Farelli<br></br>( FE )</p>
-            <img src={Jordan} alt="profile" className="profile"/>
+            <div className="name-what-end-container">
+              <p className="name">Jordan Farelli</p>
+              <p className="what-end">( FE )</p>
+            </div>
+            <img src={Jordan} alt="profile" className="profile" />
           </div>
           <div className="linkedin-and-github">
             <a
@@ -122,8 +142,11 @@ const AboutUs = () => {
         </div>
         <div className="member-container">
           <div className="name-and-picture-container">
-            <p className="name">Parker Thompson<br></br>( BE )</p>
-            <img src={Parker} alt="profile" className="profile"/>
+            <div className="name-what-end-container">
+              <p className="name">Parker David Thompson</p>
+              <p className="what-end">( BE )</p>
+            </div>
+            <img src={Parker} alt="profile" className="profile" />
           </div>
           <div className="linkedin-and-github">
             <a
@@ -139,8 +162,11 @@ const AboutUs = () => {
         </div>
         <div className="member-container">
           <div className="name-and-picture-container">
-            <p className="name">Thiago Silveira<br></br>( BE )</p>
-            <img src={Thiago} alt="profile" className="profile"/>
+            <div className="name-what-end-container">
+              <p className="name">Thiago Silveira</p>
+              <p className="what-end">( BE )</p>
+            </div>
+            <img src={Thiago} alt="profile" className="profile" />
           </div>
           <div className="linkedin-and-github">
             <a

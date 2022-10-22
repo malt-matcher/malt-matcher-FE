@@ -4,27 +4,24 @@
   align-items: center;
   background-color: #fff897;
   width: 40%;
-  /* transform: translateY(-38em); */
   margin-top: 2px;
   margin-bottom: 25px;
   border-radius: 35px;
-  box-shadow: inset 0 0 10px black;
+  transition: 0.2s;
+  box-shadow: inset 0 0 7px black;
 }
 
 .single-brewery-container:hover {
-  background-color: #f28e1c;
-  box-shadow: inset 0 0 15px black;
-}
-
-.single-brewery-container:hover .show-beers-button {
-  background-color: #fff897;
+  box-shadow: 0 0 15px black;
+  transform: scale(1.05);
 }
 
 .brewery-name {
   font-weight: bold;
-  font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 0;
+  font-size: 25px;
+  margin-top: 11px;
+  margin-bottom: 0.5%;
+  text-shadow: 0 1px 1px #f28e1c;
 }
 
 .brewery-name:hover {
@@ -33,7 +30,6 @@
 
 .website-anchor:link {
   color: black;
-  /* background-color: transparent; */
   text-decoration: none;
 }
 
@@ -44,8 +40,8 @@
 }
 
 .brewery-distance {
-  margin-top: 5%;
-  margin-bottom: 1.5%;
+  margin-top: 2%;
+  margin-bottom: 1%;
   cursor: default;
 }
 
@@ -53,18 +49,19 @@
   cursor: pointer;
   width: auto;
   height: 2em;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  /* font-size: 15px; */
   background-color: #f28e1c;
   border: none;
-  margin-top: 5%;
-  margin-bottom: 6%;
+  margin-top: 3%;
+  margin-bottom: 4%;
   box-shadow: 0 0 5px #624a2e;
+  transition: 0.2s;
 }
 
 .show-beers-button:hover {
-  box-shadow: 0 0 7px #624a2e;
+  box-shadow: 0 0 10px #624a2e;
+  transform: scale(1.05);
 }
 
 .show-beers-button:active {
@@ -85,11 +82,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #624a2e;
   width: 20%;
   padding: 2px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .faceboodAnchor,
@@ -99,4 +96,12 @@
   filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(216deg)
     brightness(108%) contrast(101%);
   margin: 3px 5px 0px 5px;
+  transition: 0.2s;
+}
+
+.faceboodAnchor:hover,
+.instagramAnchor:hover,
+.twitterAnchor:hover {
+  filter: invert(56%) sepia(44%) saturate(1321%) hue-rotate(352deg)
+    brightness(104%) contrast(90%);
 }

@@ -1,6 +1,6 @@
 import "./SingleBrewery.css";
 // import PBR from "../../assets/nikos.png";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import {
   AiFillFacebook,
   AiFillInstagram,
@@ -17,7 +17,7 @@ const SingleBrewery = ({
   instagram,
   twitter,
   beers,
-  setBeers
+  setBeers,
 }) => {
   return (
     <div className="single-brewery-container">
@@ -26,14 +26,21 @@ const SingleBrewery = ({
       </div> */}
       <div className="brewery-info-container">
         <p className="brewery-name">
-          <a className="website-anchor" href={website}>{name}</a>
+          <a className="website-anchor" href={website}>
+            {name}
+          </a>
         </p>
         {distanceFromUser < 2 ? (
           <p className="brewery-distance">{distanceFromUser} mile away</p>
         ) : (
           <p className="brewery-distance">{distanceFromUser} miles away</p>
         )}
-        <Link to={`/search/${name}`}><button className="show-beers-button" onClick={() => setBeers(beers)}>{`${name}'s Beers`}</button></Link>
+        <Link to={`/search/${name}`}>
+          <button
+            className="show-beers-button"
+            onClick={() => setBeers(beers)}
+          >{`${name}'s Beers`}</button>
+        </Link>
       </div>
       <div className="facebook-instagram-twitter">
         <a className="faceboodAnchor" href={facebook}>
@@ -50,4 +57,4 @@ const SingleBrewery = ({
   );
 };
 
-export default SingleBrewery
+export default SingleBrewery;

@@ -1,14 +1,19 @@
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div className="navbar-container">
-      <div className="malt-matcher">
-        <h1 className="malt">Malt</h1>
-        <h1 className="matcher">Matcher</h1>
-      </div>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <div className="malt-matcher-container">
+          <h1 className="malt">Malt</h1>
+          <h1 className="matcher">Matcher</h1>
+        </div>
+      </Link>
       <div>
-        <h4 className="about">About Us</h4>
+        <Link to="/about" style={{ textDecoration: "none" }}>
+          <h4 className="about">About Us</h4>
+        </Link>
       </div>
     </div>
   );

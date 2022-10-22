@@ -1,0 +1,68 @@
+.tap-listing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-and-text-container {
+  display: flex;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.back-button,
+.brewery-details-button {
+  cursor: pointer;
+  width: auto;
+  height: 2em;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f28e1c;
+  border: none;
+  box-shadow: 0 0 5px #624a2e;
+  margin: 0 45px 0 45px;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+.back-button:hover,
+.brewery-details-button:hover {
+  box-shadow: 0 0 7px #624a2e;
+  transform: scale(1.03);
+}
+
+.back-button:active,
+.brewery-details-button:active {
+  box-shadow: 0 0 10px #624a2e;
+}
+
+.backdrop-image-container {
+  height: 80vh;
+}
+
+.on-tap-text {
+  cursor: default;
+}
+
+.backdrop-image {
+  height: 40em;
+  width: 70em;
+  margin: auto;
+  border-radius: 35px;
+  opacity: 0.5;
+  box-shadow: 0 0 10px black;
+  margin-top: -1.56%;
+}
+
+.single-beers {
+  overflow-y: scroll;
+  height: 98%;
+  transform: translateY(-104%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.single-beers::-webkit-scrollbar {
+  display: none;
+}
