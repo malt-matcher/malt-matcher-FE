@@ -5,69 +5,71 @@ import Loading from "../Loading/Loading";
 import { useQuery, gql } from "@apollo/client";
 
 const BreweriesContainer = ({ location, radius, style, setBeers }) => {
+  let selectedBreweries;
 
-    let selectedBreweries
+  console.log(location, radius, style);
 
-    console.log(location, radius, style)
-
-    const GET_BREWERIES = gql`
-      query breweries($location: String! $radius: String! $style: String!) {
-        breweries(location: $location radius: $radius style: $style) {
-          catalogBreweryId
+  const GET_BREWERIES = gql`
+    query breweries($location: String!, $radius: String!, $style: String!) {
+      breweries(location: $location, radius: $radius, style: $style) {
+        catalogBreweryId
+        name
+        address
+        distanceFromUser
+        website
+        instagram
+        facebook
+        twitter
+        breweryDescription
+        beers {
           name
-          address
-          distanceFromUser
-          website
-          instagram
-          facebook
-          twitter
-          breweryDescription
-          beers {
-            name
-            style
-            description
-            abv
-            ibu
-          }
+          style
+          description
+          abv
+          ibu
         }
       }
-      `;
-
-    const { data } = useQuery(GET_BREWERIES, {
-      variables: {
-        location: location,
-        radius: radius,
-        style: style
-      }
-    });
-
-    if(data) {
-       selectedBreweries = data.breweries.map((brewery) => {
-          return (
-            <SingleBrewery
-              id={brewery.catalogBreweryId}
-              key={brewery.address}
-              name={brewery.name}
-              distanceFromUser={brewery.distanceFromUser}
-              address={brewery.address}
-              website={brewery.website}
-              instagram={brewery.instagram}
-              facebook={brewery.facebook}
-              twitter={brewery.twitter}
-              beers={brewery.beers}
-              setBeers={setBeers}
-            />
-          );
-        });
-    } else {
-      console.log('Loading')
     }
+  `;
+
+  const { data } = useQuery(GET_BREWERIES, {
+    variables: {
+      location: location,
+      radius: radius,
+      style: style,
+    },
+  });
+
+  if (data) {
+    selectedBreweries = data.breweries.map((brewery) => {
+      return (
+        <SingleBrewery
+          id={brewery.catalogBreweryId}
+          key={brewery.address}
+          name={brewery.name}
+          distanceFromUser={brewery.distanceFromUser}
+          address={brewery.address}
+          website={brewery.website}
+          instagram={brewery.instagram}
+          facebook={brewery.facebook}
+          twitter={brewery.twitter}
+          beers={brewery.beers}
+          setBeers={setBeers}
+        />
+      );
+    });
+  } else {
+    console.log("Loading");
+  }
 
   return (
     <div className="breweries-container">
       <div className="bars-image-container">
         <img src={bar} className="bars-image" alt="bar" />
-        <div className="singles">{selectedBreweries ?  selectedBreweries : <Loading />}</div>
+        <div className="singles">
+          {/* add error handling for NO results. I came across a selction that didn't return any results. */}
+          {selectedBreweries ? selectedBreweries : <Loading />}
+        </div>
       </div>
     </div>
   );
