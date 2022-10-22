@@ -1,15 +1,21 @@
 import "./SingleBeer.css";
-// import React from "react";
 
-const SingleBeer = ({abv, ibu, name, style}) => {
+const SingleBeer = ({ abv, ibu, name, style }) => {
   return (
-    //not every beer has IBU's listed as they are generally only rated for IPA's/PA's.  Leaving out 
+    //not every beer has IBU's listed as they are generally only rated for IPA's/PA's.  Leaving out
     //for now
-    <div className="single-beer">
-      <h2>{name}</h2>
-     <span> ABV: {abv}% </span> <span>Style: {style}</span>
+    <div className="single-beer-container">
+      <div className="single-beer-details-container">
+        <h2 className="beer-name">{name}</h2>
+        <p className="abv">
+          <b>ABV:</b> {abv}%
+        </p>
+        <p className="style">
+          <b>Style:</b> {style}
+        </p>
+      </div>
     </div>
-  )
+  );
 };
 
 export default SingleBeer;

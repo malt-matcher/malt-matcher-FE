@@ -1,27 +1,30 @@
 .navbar-container {
   display: flex;
   align-items: center;
-  color: #624a2e;
   margin-left: 1%;
   margin-top: 0;
   font-size: 20px;
   position: fixed;
   top: 0;
   z-index: 1;
+  text-decoration: none;
 }
 
-.malt-matcher {
+.malt-matcher-container {
   display: flex;
   margin-right: 51em;
+  color: #624a2e;
 }
 
 .about-us-container {
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
-.malt, .matcher {
-  letter-spacing: .05em;
+.malt,
+.matcher {
+  letter-spacing: 0.05em;
   margin-top: 4%;
   padding: 2px;
 }
@@ -35,6 +38,13 @@
 }
 
 .about {
-  color:#624a2e;
+  color: #624a2e;
   z-index: 1;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.about:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }

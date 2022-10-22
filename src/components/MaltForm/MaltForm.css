@@ -1,16 +1,3 @@
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  transform: translateY(-7em);
-  height: 10vh;
-}
-
-.dropdown-container {
-  transform: translateY(-5em);
-}
-
 select {
   margin: 25px;
   width: 15em;
@@ -18,6 +5,18 @@ select {
   box-shadow: inset 0 0 3px black;
   border-radius: 5px;
   text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-7em);
+  height: 10vh;
+}
+
+.dropdown-container {
+  transform: translateY(-5em);
 }
 
 .form-button {
@@ -28,10 +27,12 @@ select {
   font-size: 15px;
   background-color: #f28e1c;
   border: none;
+  transition: 0.2s;
 }
 
 .form-button:hover {
   box-shadow: inset 0 0 10px #fff897;
+  transform: scale(1.05);
 }
 
 .form-button:active {

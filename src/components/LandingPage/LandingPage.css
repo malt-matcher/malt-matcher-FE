@@ -1,10 +1,8 @@
 .home-container {
   display: flex;
   align-items: center;
-  /* height: 100vh; */
   margin-top: 8%;
   justify-content: space-evenly;
-  /* margin-right: 10%; */
 }
 
 .greeting {
@@ -22,5 +20,28 @@
 
 .greeting-msg {
   font-size: 25px;
-  
+}
+
+.landing-page-home-button {
+  cursor: pointer;
+  width: 15em;
+  height: 3em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: #f28e1c;
+  border: none;
+  margin-top: 3%;
+  margin-bottom: 4%;
+  box-shadow: 0 0 5px #624a2e;
+  transition: 0.2s;
+}
+
+.landing-page-home-button:hover {
+  box-shadow: 0 0 10px #624a2e;
+  transform: scale(1.05);
+}
+
+.landing-page-home-button:active {
+  box-shadow: 0 0 20px #624a2e;
 }
