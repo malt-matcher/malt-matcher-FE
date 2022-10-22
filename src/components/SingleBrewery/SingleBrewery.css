@@ -22,6 +22,7 @@
   margin-top: 11px;
   margin-bottom: 0.5%;
   text-shadow: 0 1px 1px #f28e1c;
+  font-variant: small-caps;
 }
 
 .brewery-name:hover {
@@ -57,6 +58,8 @@
   margin-bottom: 4%;
   box-shadow: 0 0 5px #624a2e;
   transition: 0.2s;
+  font-variant: small-caps;
+  font-weight: bold;
 }
 
 .show-beers-button:hover {
@@ -87,6 +90,7 @@
   padding: 2px;
   border-radius: 10px;
   margin-bottom: 11px;
+  transition: 0.2s;
 }
 
 .faceboodAnchor,

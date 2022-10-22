@@ -28,7 +28,7 @@ const SingleBrewery = ({
       </div> */}
       <div className="brewery-info-container">
         <p className="brewery-name">
-          <a className="website-anchor" href={website}>
+          <a className="website-anchor" target="_blank" href={website}>
             {name}
           </a>
         </p>
@@ -49,13 +49,13 @@ const SingleBrewery = ({
         </Link>
       </div>
       <div className="facebook-instagram-twitter">
-        <a className="faceboodAnchor" href={facebook}>
+        <a className="faceboodAnchor" target="_blank" href={facebook}>
           <AiFillFacebook />
         </a>
-        <a className="instagramAnchor" href={instagram}>
+        <a className="instagramAnchor" target="_blank" href={instagram}>
           <AiFillInstagram />
         </a>
-        <a className="twitterAnchor" href={twitter}>
+        <a className="twitterAnchor" target="_blank" href={twitter}>
           <AiOutlineTwitter />
         </a>
       </div>

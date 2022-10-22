@@ -1,0 +1,21 @@
+iframe {
+  height: 40em;
+  width: 70em;
+  border-radius: 35px;
+  box-shadow: 0 0 10px black;
+  margin-top: 1%;
+}
+
+.brewery-details-name {
+  font-size: 2em;
+  margin-bottom: 0;
+  margin-top: 1%;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.brewery-details-address {
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: .5%;
+}
