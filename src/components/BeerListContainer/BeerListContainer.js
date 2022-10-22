@@ -15,7 +15,8 @@ const BeerListContainer = ({beerList}) => {
   })
 
   return (
-    <section>
+    <section className="tap-listing">
+      <h1>What's on Tap</h1>
       {selectedBrews}
     </section>
 

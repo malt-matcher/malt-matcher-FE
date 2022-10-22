@@ -1,0 +1,9 @@
+.single-beer{
+  background-color: #fff897;
+  width: 40%;
+  /* transform: translateY(-38em); */
+  margin-top: 2px;
+  margin-bottom: 25px;
+  border-radius: 35px;
+  box-shadow: inset 0 0 10px black;
+}
