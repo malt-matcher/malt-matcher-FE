@@ -19,7 +19,7 @@ const SingleBrewery = ({
   beers,
   setBeers,
   setAddress,
-  setName
+  setName,
 }) => {
   return (
     <div className="single-brewery-container">
@@ -28,7 +28,12 @@ const SingleBrewery = ({
       </div> */}
       <div className="brewery-info-container">
         <p className="brewery-name">
-          <a className="website-anchor" target="_blank" href={website}>
+          <a
+            className="website-anchor"
+            target="_blank"
+            rel="noreferrer"
+            href={website}
+          >
             {name}
           </a>
         </p>
@@ -41,21 +46,36 @@ const SingleBrewery = ({
           <button
             className="show-beers-button"
             onClick={() => {
-              setBeers(beers)
-              setAddress(address)
-              setName(name)
+              setBeers(beers);
+              setAddress(address);
+              setName(name);
             }}
           >{`${name}'s Beers`}</button>
         </Link>
       </div>
       <div className="facebook-instagram-twitter">
-        <a className="faceboodAnchor" target="_blank" href={facebook}>
+        <a
+          className="faceboodAnchor"
+          target="_blank"
+          rel="noreferrer"
+          href={facebook}
+        >
           <AiFillFacebook />
         </a>
-        <a className="instagramAnchor" target="_blank" href={instagram}>
+        <a
+          className="instagramAnchor"
+          target="_blank"
+          rel="noreferrer"
+          href={instagram}
+        >
           <AiFillInstagram />
         </a>
-        <a className="twitterAnchor" target="_blank" href={twitter}>
+        <a
+          className="twitterAnchor"
+          target="_blank"
+          rel="noreferrer"
+          href={twitter}
+        >
           <AiOutlineTwitter />
         </a>
       </div>

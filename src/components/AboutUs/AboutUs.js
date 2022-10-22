@@ -47,6 +47,7 @@ const AboutUs = () => {
             <a
               className="linkedinAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/andrew-miller-0393b448/"
             >
               <AiFillLinkedin />
@@ -54,6 +55,7 @@ const AboutUs = () => {
             <a
               className="githubAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://github.com/andrewmiller45"
             >
               <AiFillGithub />
@@ -72,6 +74,7 @@ const AboutUs = () => {
             <a
               className="linkedinAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/bryan-shears/"
             >
               <AiFillLinkedin />
@@ -79,6 +82,7 @@ const AboutUs = () => {
             <a
               className="githubAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://github.com/b-shears"
             >
               <AiFillGithub />
@@ -97,6 +101,7 @@ const AboutUs = () => {
             <a
               className="linkedinAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/bryce-simonds/"
             >
               <AiFillLinkedin />
@@ -104,6 +109,7 @@ const AboutUs = () => {
             <a
               className="githubAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://github.com/brycesimonds"
             >
               <AiFillGithub />
@@ -122,6 +128,7 @@ const AboutUs = () => {
             <a
               className="linkedinAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/cole-stephenson-99688a240/"
             >
               <AiFillLinkedin />
@@ -129,6 +136,7 @@ const AboutUs = () => {
             <a
               className="githubAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://github.com/colestephenson1"
             >
               <AiFillGithub />
@@ -147,6 +155,7 @@ const AboutUs = () => {
             <a
               className="linkedinAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/jordan-farelli/"
             >
               <AiFillLinkedin />
@@ -154,6 +163,7 @@ const AboutUs = () => {
             <a
               className="githubAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://github.com/jfarelli"
             >
               <AiFillGithub />
@@ -172,6 +182,7 @@ const AboutUs = () => {
             <a
               className="linkedinAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/parker-thomson-a15a68146/"
             >
               <AiFillLinkedin />
@@ -179,6 +190,7 @@ const AboutUs = () => {
             <a
               className="githubAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://github.com/pdthomson"
             >
               <AiFillGithub />
@@ -197,6 +209,7 @@ const AboutUs = () => {
             <a
               className="linkedinAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/thiag-o/"
             >
               <AiFillLinkedin />
@@ -204,6 +217,7 @@ const AboutUs = () => {
             <a
               className="githubAnchor"
               target="_blank"
+              rel="noreferrer"
               href="https://github.com/tig-o"
             >
               <AiFillGithub />
