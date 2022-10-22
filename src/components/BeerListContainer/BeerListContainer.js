@@ -3,7 +3,7 @@ import bar from "../../assets/bar.jpg";
 import SingleBeer from "../SingleBeer/SingleBeer";
 import { Link } from "react-router-dom";
 
-const BeerListContainer = ({ beerList }) => {
+const BeerListContainer = ({ beerList, name}) => {
   let selectedBrews = beerList.map((brew) => {
     return (
       <SingleBeer
@@ -21,10 +21,10 @@ const BeerListContainer = ({ beerList }) => {
         <Link to="/maltfinder">
           <button className="back-button">Back To Home</button>
         </Link>
-        <h1 className="on-tap-text">On Tap @ 'Brewery Name'</h1>
+        <h1 className="on-tap-text">On Tap @ {name}</h1>
         <Link to="/details">
           <button className="brewery-details-button">
-            "Brewery Name" Directions
+            {name}'s Directions
           </button>
         </Link>
       </div>

@@ -7,7 +7,7 @@ import BreweryDetails from "./components/BreweryDetails/BreweryDetails";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import LandingPage from "./components/LandingPage/LandingPage";
 import AboutUs from "./components/AboutUs/AboutUs";
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
@@ -16,6 +16,8 @@ function App() {
   const [radius, setRadius] = useState("");
   const [style, setStyle] = useState("");
   const [beers, setBeers] = useState([]);
+  const [address, setAddress] = useState("")
+  const [name, setName] = useState("")
 
   return (
     <div className="App">
@@ -42,19 +44,21 @@ function App() {
               radius={radius}
               style={style}
               setBeers={setBeers}
+              setAddress={setAddress}
+              setName={setName}
             />
           )}
         />
         <Route
           exact
           path="/search/:selectedBrewery"
-          render={() => <BeerListContainer beerList={beers} />}
+          render={() => <BeerListContainer beerList={beers} name={name}/>}
         />
         <Route
           exact
-          path="/details"
-          // path='/:breweryLocations/:selectedBrewery/details'
-          render={() => <BreweryDetails />}
+          // path="/details"
+          path='/details'
+          render={() => <BreweryDetails name={name} address={address} />}
         />
         <Route
           exact

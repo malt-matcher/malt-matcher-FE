@@ -18,6 +18,8 @@ const SingleBrewery = ({
   twitter,
   beers,
   setBeers,
+  setAddress,
+  setName
 }) => {
   return (
     <div className="single-brewery-container">
@@ -38,7 +40,11 @@ const SingleBrewery = ({
         <Link to={`/search/${name}`}>
           <button
             className="show-beers-button"
-            onClick={() => setBeers(beers)}
+            onClick={() => {
+              setBeers(beers)
+              setAddress(address)
+              setName(name)
+            }}
           >{`${name}'s Beers`}</button>
         </Link>
       </div>

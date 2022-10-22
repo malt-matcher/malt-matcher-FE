@@ -4,7 +4,7 @@ import SingleBrewery from "../SingleBrewery/SingleBrewery";
 import Loading from "../Loading/Loading";
 import { useQuery, gql } from "@apollo/client";
 
-const BreweriesContainer = ({ location, radius, style, setBeers }) => {
+const BreweriesContainer = ({ location, radius, style, setBeers, setAddress, setName }) => {
   let selectedBreweries;
 
   console.log(location, radius, style);
@@ -56,6 +56,8 @@ const BreweriesContainer = ({ location, radius, style, setBeers }) => {
           twitter={brewery.twitter}
           beers={brewery.beers}
           setBeers={setBeers}
+          setAddress={setAddress}
+          setName={setName}
         />
       );
     });
