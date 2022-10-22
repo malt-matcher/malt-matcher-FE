@@ -27,10 +27,11 @@ const AboutUs = () => {
         app to find the breweries that carried our our brew of choice.
         <br></br>
         <br></br>
-        We hope you enjoy our app while you’re here! Please feel free to reach
-        out to any of us!
+        We hope you enjoy our app while you’re here! <br></br>Please feel free
+        to reach out to any of us!
         <br></br>
-        Thanks for looking!
+        <br></br>
+        Cheers!
       </h1>
       <h2 className="developers">The Developers</h2>
       <div className="team-container">
@@ -45,12 +46,16 @@ const AboutUs = () => {
           <div className="linkedin-and-github">
             <a
               className="linkedinAnchor"
+              target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/andrew-miller-0393b448/"
             >
               <AiFillLinkedin />
             </a>
             <a
               className="githubAnchor"
+              target="_blank"
+              rel="noreferrer"
               href="https://github.com/andrewmiller45"
             >
               <AiFillGithub />
@@ -68,11 +73,18 @@ const AboutUs = () => {
           <div className="linkedin-and-github">
             <a
               className="linkedinAnchor"
+              target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/bryan-shears/"
             >
               <AiFillLinkedin />
             </a>
-            <a className="githubAnchor" href="https://github.com/b-shears">
+            <a
+              className="githubAnchor"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/b-shears"
+            >
               <AiFillGithub />
             </a>
           </div>
@@ -88,11 +100,18 @@ const AboutUs = () => {
           <div className="linkedin-and-github">
             <a
               className="linkedinAnchor"
+              target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/bryce-simonds/"
             >
               <AiFillLinkedin />
             </a>
-            <a className="githubAnchor" href="https://github.com/brycesimonds">
+            <a
+              className="githubAnchor"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/brycesimonds"
+            >
               <AiFillGithub />
             </a>
           </div>
@@ -108,12 +127,16 @@ const AboutUs = () => {
           <div className="linkedin-and-github">
             <a
               className="linkedinAnchor"
+              target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/cole-stephenson-99688a240/"
             >
               <AiFillLinkedin />
             </a>
             <a
               className="githubAnchor"
+              target="_blank"
+              rel="noreferrer"
               href="https://github.com/colestephenson1"
             >
               <AiFillGithub />
@@ -131,11 +154,18 @@ const AboutUs = () => {
           <div className="linkedin-and-github">
             <a
               className="linkedinAnchor"
+              target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/jordan-farelli/"
             >
               <AiFillLinkedin />
             </a>
-            <a className="githubAnchor" href="https://github.com/jfarelli">
+            <a
+              className="githubAnchor"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/jfarelli"
+            >
               <AiFillGithub />
             </a>
           </div>
@@ -151,11 +181,18 @@ const AboutUs = () => {
           <div className="linkedin-and-github">
             <a
               className="linkedinAnchor"
+              target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/parker-thomson-a15a68146/"
             >
               <AiFillLinkedin />
             </a>
-            <a className="githubAnchor" href="https://github.com/pdthomson">
+            <a
+              className="githubAnchor"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/pdthomson"
+            >
               <AiFillGithub />
             </a>
           </div>
@@ -171,11 +208,18 @@ const AboutUs = () => {
           <div className="linkedin-and-github">
             <a
               className="linkedinAnchor"
+              target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/thiag-o/"
             >
               <AiFillLinkedin />
             </a>
-            <a className="githubAnchor" href="https://github.com/tig-o">
+            <a
+              className="githubAnchor"
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/tig-o"
+            >
               <AiFillGithub />
             </a>
           </div>

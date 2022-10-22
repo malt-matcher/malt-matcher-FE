@@ -42,7 +42,6 @@ const BreweriesContainer = ({ location, radius, style, setBeers, setAddress, set
 
   if (data) {
     selectedBreweries = data.breweries.map((brewery) => {
-      console.log("BREWERY: ", brewery);
       return (
         <SingleBrewery
           id={brewery.catalogBreweryId}

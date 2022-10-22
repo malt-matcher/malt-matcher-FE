@@ -5,6 +5,22 @@ select {
   box-shadow: inset 0 0 3px black;
   border-radius: 5px;
   text-align: center;
+  font-weight: bold;
+  font-variant: small-caps;
+  background-color: #fff897;
+  border: 2px solid #f28e1c;
+  transition: 0.2s;
+}
+
+select:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+select:focus {
+  outline: none;
+  background-color: #f28e1c;
+  border: 2px solid #fff897;
 }
 
 .form-container {
@@ -28,6 +44,8 @@ select {
   background-color: #f28e1c;
   border: none;
   transition: 0.2s;
+  font-weight: bold;
+  font-variant: small-caps;
 }
 
 .form-button:hover {

@@ -21,14 +21,14 @@ img {
   margin-top: 10%;
   width: 75%;
   font-size: 2em;
-  transform: translateY(-140%);
+  transform: translateY(-133%);
   color: #fff897;
-  text-shadow: 0 15px 15px black;
+  text-shadow: 0 10px 10px black;
 }
 
 .developers {
   color: #f28e1c;
-  transform: translateY(-8.75em);
+  transform: translateY(-9.5em);
   font-size: 50px;
   text-shadow: 0 5px black;
   background-color: rgba(0, 0, 0, 0.5);
@@ -75,6 +75,7 @@ img {
   box-shadow: 0 0 5px black;
   width: 95%;
   height: 3.25em;
+  cursor: default;
 }
 
 .name {

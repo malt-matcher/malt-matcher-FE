@@ -6,8 +6,9 @@
 
 .button-and-text-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-top: 2%;
+  margin-top: 0.5%;
 }
 
 .back-button,
@@ -20,9 +21,15 @@
   background-color: #f28e1c;
   border: none;
   box-shadow: 0 0 5px #624a2e;
-  margin: 0 45px 0 45px;
+  margin: 0 5px 0 5px;
+  position: relative;
+  left: 0px;
+  top: 0px;
   z-index: 1;
   transition: 0.2s;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .back-button:hover,
@@ -40,8 +47,23 @@
   height: 80vh;
 }
 
+.on-tap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .on-tap-text {
   cursor: default;
+  margin: 0;
+  /* margin-bottom: 5%; */
+  font-size: 1.5em;
+  font-variant: small-caps;
+}
+
+.on-tap-number {
+  margin: 0;
+  margin-bottom: 1%;
 }
 
 .backdrop-image {
@@ -51,7 +73,7 @@
   border-radius: 35px;
   opacity: 0.5;
   box-shadow: 0 0 10px black;
-  margin-top: -1.56%;
+  margin-top: 1%;
 }
 
 .single-beers {

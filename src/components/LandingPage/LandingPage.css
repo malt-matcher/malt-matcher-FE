@@ -16,6 +16,7 @@
 .welcome {
   margin-bottom: -7%;
   font-size: 3.25em;
+  font-variant: small-caps;
 }
 
 .greeting-msg {
@@ -35,6 +36,8 @@
   margin-bottom: 4%;
   box-shadow: 0 0 5px #624a2e;
   transition: 0.2s;
+  font-variant: small-caps;
+  font-weight: bold;
 }
 
 .landing-page-home-button:hover {

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   margin-left: 1%;
-  margin-top: 0;
+  margin-top: -.5%;
   font-size: 20px;
   position: fixed;
   top: 0;
@@ -13,7 +13,14 @@
 .malt-matcher-container {
   display: flex;
   margin-right: 51em;
-  color: #624a2e;
+}
+
+.malt-matcher-container:hover .malt {
+  background-color: #f28e1c;
+}
+
+.malt-matcher-container:hover .matcher {
+  background-color: #fff897;
 }
 
 .about-us-container {
@@ -25,8 +32,11 @@
 .malt,
 .matcher {
   letter-spacing: 0.05em;
-  margin-top: 4%;
+  /* margin-top: 4%; */
   padding: 2px;
+  color: #624a2e;
+  font-variant: small-caps;
+  letter-spacing: .01em;
 }
 
 .malt {
@@ -42,9 +52,17 @@
   z-index: 1;
   text-decoration: none;
   transition: 0.2s;
+  font-variant: small-caps;
+  letter-spacing: .01em;
+}
+
+.about:focus {
+  background-color: #f28e1c;
+  border: 2px solid #fff897;
 }
 
 .about:hover {
   cursor: pointer;
   transform: scale(1.05);
+  text-shadow: 0 5px 5px #fff897;
 }
