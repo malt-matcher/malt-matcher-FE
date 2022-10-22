@@ -37,7 +37,7 @@ const MaltForm = ({setLocation, setRadius, setStyle}) => {
           <option value="15">15 Miles</option>
           <option value="20">20 Miles</option>
           <option value="25">25 Miles</option>
-          <option value="50">50 Miles</option>
+          <option value="100">100 Miles</option>
         </select>
       </div>
       <div className="button-container">

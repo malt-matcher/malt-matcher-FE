@@ -12,9 +12,12 @@
 }
 
 .single-brewery-container:hover {
-  cursor: pointer;
   background-color: #f28e1c;
   box-shadow: inset 0 0 15px black;
+}
+
+.single-brewery-container:hover .show-beers-button {
+  background-color: #fff897;
 }
 
 .brewery-name {
@@ -22,6 +25,10 @@
   font-size: 20px;
   margin-top: 10px;
   margin-bottom: 0;
+}
+
+.brewery-name:hover {
+  cursor: pointer;
 }
 
 .website-anchor:link {
@@ -37,7 +44,32 @@
 }
 
 .brewery-distance {
-  margin-bottom: 2px;
+  margin-top: 5%;
+  margin-bottom: 1.5%;
+  cursor: default;
+}
+
+.show-beers-button {
+  cursor: pointer;
+  width: auto;
+  height: 2em;
+  border-radius: 5px;
+  cursor: pointer;
+  /* font-size: 15px; */
+  background-color: #f28e1c;
+  border: none;
+  margin-top: 5%;
+  margin-bottom: 6%;
+  box-shadow: 0 0 5px #624a2e;
+}
+
+.show-beers-button:hover {
+  box-shadow: 0 0 7px #624a2e;
+}
+
+.show-beers-button:active {
+  background-color: #f6c101;
+  box-shadow: 0 0 10px #624a2e;
 }
 
 /* .brewery-image-container {

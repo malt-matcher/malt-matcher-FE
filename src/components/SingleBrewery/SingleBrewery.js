@@ -33,7 +33,7 @@ const SingleBrewery = ({
         ) : (
           <p className="brewery-distance">{distanceFromUser} miles away</p>
         )}
-        <Link to={`/search/${name}`}><button className="brewery-location" onClick={() => setBeers(beers)}>Show me da beers</button></Link>
+        <Link to={`/search/${name}`}><button className="show-beers-button" onClick={() => setBeers(beers)}>{`${name}'s Beers`}</button></Link>
       </div>
       <div className="facebook-instagram-twitter">
         <a className="faceboodAnchor" href={facebook}>

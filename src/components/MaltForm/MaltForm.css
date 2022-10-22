@@ -1,3 +1,12 @@
+select {
+  margin: 25px;
+  width: 15em;
+  height: 2em;
+  box-shadow: inset 0 0 3px black;
+  border-radius: 5px;
+  text-align: center;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -9,15 +18,6 @@
 
 .dropdown-container {
   transform: translateY(-5em);
-}
-
-select {
-  margin: 25px;
-  width: 15em;
-  height: 2em;
-  box-shadow: inset 0 0 3px black;
-  border-radius: 5px;
-  text-align: center;
 }
 
 .form-button {

@@ -15,10 +15,10 @@ const BeerListContainer = ({beerList}) => {
   })
 
   return (
-    <section className="tap-listing">
+    <div className="tap-listing">
       <h1>What's on Tap</h1>
       {selectedBrews}
-    </section>
+    </div>
 
   ) 
 

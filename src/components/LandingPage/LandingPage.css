@@ -22,5 +22,8 @@
 
 .greeting-msg {
   font-size: 25px;
-  
+}
+
+.home-button {
+  box-shadow: 0 0 5px;
 }

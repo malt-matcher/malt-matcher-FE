@@ -1,10 +1,10 @@
-import React from "react";
+import './Loading.css'
 
 
 const Loading = () => {
 
     return (
-        <div>
+        <div className="loading-message">
             <p>Please wait while your results ferment...</p>
         </div>
     )
