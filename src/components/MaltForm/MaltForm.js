@@ -7,6 +7,7 @@ const MaltForm = ({ setLocation, setRadius, setStyle }) => {
       <div className="dropdown-container">
         <select
           placeholder="Beer Syle"
+          className="beer-style"
           onChange={(event) => setStyle(event.target.value)}
         >
           Beer Style
@@ -32,6 +33,7 @@ const MaltForm = ({ setLocation, setRadius, setStyle }) => {
         </select>
         <select
           placeholder="City"
+          className="city"
           onChange={(event) => {
             setLocation(event.target.value);
           }}
@@ -60,6 +62,7 @@ const MaltForm = ({ setLocation, setRadius, setStyle }) => {
         </select>
         <select
           placeholder="Radius"
+          className="radius"
           onChange={(event) => setRadius(event.target.value)}
         >
           Radius
