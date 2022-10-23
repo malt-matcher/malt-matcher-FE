@@ -28,6 +28,11 @@ describe('Malt Form Page', () => {
     cy.get('button').click()
     cy.url().should('eq', 'http://localhost:3000/search')
   })
+
+  //need to add a feature where all select drop down items are required.  I added 'required' to
+  //the `select` drop down - need to format the button to be unclickable until the fields are filled?  
+  //Easy fix.... too drunk to immediately solve right now 
+
 })
 
 describe('Loading view', () => {
@@ -49,6 +54,35 @@ describe('Bad URL Message Page', () => {
     cy.get('h2').contains('Party')
   })
 })
+
+describe('Matching breweries!', () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:3000/maltfinder')
+    cy.get('select[class=beer-style]').select('Lager')
+    cy.get('select[class=city]').select('Denver')
+    cy.get('select[class=radius]').select('50').should('have.value', '50')
+    cy.get('button').click()
+    cy.wait(50000)
+  })
+
+  it('display matching breweries', () => {
+    cy.get('.single-brewery-container').eq(0).contains('Denver Beer Company')
+    cy.get('.single-brewery-container').eq(1).contains('Copper')
+    cy.get('.single-brewery-container').eq(2).contains('Denver')
+  })
+
+  it('takes the user to a social media page of the brewery if you click on it', () => {
+    cy.get('.instagramAnchor').eq(0).click()
+    // cy.url().should('eq', 'https://www.instagram.com/denverbeerco/')
+    //not sure how to make external url's pass in a cypress test.  Still very drunk
+  })
+
+  it('takes the user to the brewery\'s tap listings if you click on the tap listing button', () => {
+    cy.get('button').eq(0).click()
+    cy.url().should('eq', 'http://localhost:3000/search/Denver%20Beer%20Company')
+  })
+})
+
 
 
 // describe('Malt Matcher Page', () => {

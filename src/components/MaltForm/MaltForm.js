@@ -9,6 +9,7 @@ const MaltForm = ({ setLocation, setRadius, setStyle }) => {
           placeholder="Beer Syle"
           className="beer-style"
           onChange={(event) => setStyle(event.target.value)}
+          required
         >
           Beer Style
           <option value="">Select a Brew Style</option>
@@ -37,6 +38,7 @@ const MaltForm = ({ setLocation, setRadius, setStyle }) => {
           onChange={(event) => {
             setLocation(event.target.value);
           }}
+          required
         >
           City
           <option value="">Select a City</option>
@@ -64,6 +66,7 @@ const MaltForm = ({ setLocation, setRadius, setStyle }) => {
           placeholder="Radius"
           className="radius"
           onChange={(event) => setRadius(event.target.value)}
+          required
         >
           Radius
           <option value="">Select a Radius</option>
