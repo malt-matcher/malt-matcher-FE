@@ -62,7 +62,7 @@ describe('Matching breweries!', () => {
     cy.get('select[class=city]').select('Denver')
     cy.get('select[class=radius]').select('50').should('have.value', '50')
     cy.get('button').click()
-    cy.wait(50000)
+    cy.wait(35000)
   })
 
   it('display matching breweries', () => {
@@ -83,7 +83,22 @@ describe('Matching breweries!', () => {
   })
 })
 
+describe('brewery tap list page', () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:3000/maltfinder')
+    cy.get('select[class=beer-style]').select('Lager')
+    cy.get('select[class=city]').select('Denver')
+    cy.get('select[class=radius]').select('50').should('have.value', '50')
+    cy.get('button').click()
+    cy.wait(35000)
+    cy.get('button').eq(0).click()
+  })
 
+  it('should display those yummy brewskis', () => {
+    cy.get('.single-beer-container').eq(0).should('contain', 'Blood Orange')
+  }) 
+
+})
 
 // describe('Malt Matcher Page', () => {
 //   beforeEach(() => {
