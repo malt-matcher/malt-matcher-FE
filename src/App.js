@@ -20,7 +20,10 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar 
+        setLocation={setLocation}       
+        setRadius={setRadius}       
+        setStyle={setStyle}/>
       <Switch>
         <Route exact path="/" render={() => <LandingPage />} />
         <Route
