@@ -14,9 +14,13 @@ const LandingPage = () => {
       <div className="greeting">
         <h1 className="welcome">Welcome To Malt Matcher!</h1>
         <h2 className="greeting-msg">{greeting}</h2>
-        <Link to="/maltfinder">
-          <button className="landing-page-home-button">Find Some Brews!</button>
-        </Link>
+        <div>
+          <Link to="/maltfinder">
+            <button className="landing-page-home-button">
+              Find Some Brews!
+            </button>
+          </Link>
+        </div>
       </div>
       <div className="home-img-container">
         <img src={cheers} className="cheers-image" alt="cheers" />
