@@ -1,15 +1,22 @@
 import "./MaltForm.css";
 import { Link } from "react-router-dom";
 
-const MaltForm = ({ setLocation, setRadius, setStyle }) => {
+const MaltForm = ({
+  setLocation,
+  setRadius,
+  setStyle,
+  location,
+  radius,
+  style,
+}) => {
   return (
     <form className="form-container">
       <div className="dropdown-container">
         <select
+          required
           placeholder="Beer Syle"
           className="beer-style"
           onChange={(event) => setStyle(event.target.value)}
-          required
         >
           Beer Style
           <option value="">Select a Brew Style</option>
@@ -33,12 +40,12 @@ const MaltForm = ({ setLocation, setRadius, setStyle }) => {
           <option value="Witbier">Witbier</option>
         </select>
         <select
+          required
           placeholder="City"
           className="city"
           onChange={(event) => {
             setLocation(event.target.value);
           }}
-          required
         >
           City
           <option value="">Select a City</option>
@@ -63,10 +70,10 @@ const MaltForm = ({ setLocation, setRadius, setStyle }) => {
           <option value="Westminster, CO">Westminster</option>
         </select>
         <select
+          required
           placeholder="Radius"
           className="radius"
           onChange={(event) => setRadius(event.target.value)}
-          required
         >
           Radius
           <option value="">Select a Radius</option>
@@ -81,7 +88,9 @@ const MaltForm = ({ setLocation, setRadius, setStyle }) => {
       </div>
       <div className="button-container">
         <Link to="/search">
-          <button className="form-button">Show Me Breweries</button>
+          {style && location && radius ? <button className="form-button">
+            Show Me Breweries
+          </button> : ''}
         </Link>
       </div>
     </form>

@@ -11,13 +11,12 @@ import { Route, Switch } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
-
   const [location, setLocation] = useState("");
   const [radius, setRadius] = useState("");
   const [style, setStyle] = useState("");
   const [beers, setBeers] = useState([]);
-  const [address, setAddress] = useState("")
-  const [name, setName] = useState("")
+  const [address, setAddress] = useState("");
+  const [name, setName] = useState("");
 
   return (
     <div className="App">
@@ -29,6 +28,9 @@ function App() {
           path="/maltFinder"
           render={() => (
             <MaltFinderContainer
+              location={location}
+              radius={radius}
+              style={style}
               setLocation={setLocation}
               setRadius={setRadius}
               setStyle={setStyle}
@@ -52,14 +54,20 @@ function App() {
         <Route
           exact
           path="/search/:selectedBrewery"
-          render={() => <BeerListContainer beerList={beers} name={name} setLocation={setLocation}
-          setRadius={setRadius}
-          setStyle={setStyle}/>}
+          render={() => (
+            <BeerListContainer
+              beerList={beers}
+              name={name}
+              setLocation={setLocation}
+              setRadius={setRadius}
+              setStyle={setStyle}
+            />
+          )}
         />
         <Route
           exact
           // path="/details"
-          path='/details'
+          path="/details"
           render={() => <BreweryDetails name={name} address={address} />}
         />
         <Route
