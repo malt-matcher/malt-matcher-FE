@@ -52,7 +52,9 @@ function App() {
         <Route
           exact
           path="/search/:selectedBrewery"
-          render={() => <BeerListContainer beerList={beers} name={name}/>}
+          render={() => <BeerListContainer beerList={beers} name={name} setLocation={setLocation}
+          setRadius={setRadius}
+          setStyle={setStyle}/>}
         />
         <Route
           exact
