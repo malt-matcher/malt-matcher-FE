@@ -126,13 +126,13 @@ https://user-images.githubusercontent.com/97558758/197641640-4e197ee0-cc02-4f1e-
 
 <br>
 
-## 🔮 <b>Future Extensions:</b>
+## <b>Future Extensions:</b>
 
 - Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
 
 <br>
 
-## 💿 <b>Technologies:</b>
+## <b>Technologies:</b>
 
 ![Apollo-GraphQL](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
