@@ -21,7 +21,7 @@ const NavBar = ({setLocation, setRadius, setStyle}) => {
       </div>
       <div>
         <Link to="/about" style={{ textDecoration: "none" }}>
-          <h4 className="about">About Us</h4>
+          <h4 className="about">About</h4>
         </Link>
       </div>
     </div>
