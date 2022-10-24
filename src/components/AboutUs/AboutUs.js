@@ -49,6 +49,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://www.linkedin.com/in/andrew-miller-0393b448/"
+              aria-label="Andrew Miller LinkedIn Website"
             >
               <AiFillLinkedin />
             </a>
@@ -57,6 +58,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://github.com/andrewmiller45"
+              aria-label="Andrew Miller GitHub Website"
             >
               <AiFillGithub />
             </a>
@@ -76,6 +78,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://www.linkedin.com/in/bryan-shears/"
+              aria-label="Bryan Shears LinkedIn Website"
             >
               <AiFillLinkedin />
             </a>
@@ -84,6 +87,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://github.com/b-shears"
+              aria-label="Bryan Shears GitHub Website"
             >
               <AiFillGithub />
             </a>
@@ -103,6 +107,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://www.linkedin.com/in/bryce-simonds/"
+              aria-label="Bryce Simonds LinkedIn Website"
             >
               <AiFillLinkedin />
             </a>
@@ -111,6 +116,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://github.com/brycesimonds"
+              aria-label="Bryce Simonds GitHub Website"
             >
               <AiFillGithub />
             </a>
@@ -130,6 +136,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://www.linkedin.com/in/cole-stephenson-99688a240/"
+              aria-label="Cole Stephenson LinkedIn Website"
             >
               <AiFillLinkedin />
             </a>
@@ -138,6 +145,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://github.com/colestephenson1"
+              aria-label="Cole Stephenson GitHub Website"
             >
               <AiFillGithub />
             </a>
@@ -157,6 +165,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://www.linkedin.com/in/jordan-farelli/"
+              aria-label="Jordan Farelli LinkedIn Website"
             >
               <AiFillLinkedin />
             </a>
@@ -165,6 +174,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://github.com/jfarelli"
+              aria-label="Jordan Farelli GitHub Website"
             >
               <AiFillGithub />
             </a>
@@ -184,6 +194,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://www.linkedin.com/in/parker-thomson-a15a68146/"
+              aria-label="Parker David Thompson LinkedIn Website"
             >
               <AiFillLinkedin />
             </a>
@@ -192,6 +203,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://github.com/pdthomson"
+              aria-label="Parker David Thompson GitHub Website"
             >
               <AiFillGithub />
             </a>
@@ -211,6 +223,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://www.linkedin.com/in/thiag-o/"
+              aria-label="Thiago Silveira LinkedIn Website"
             >
               <AiFillLinkedin />
             </a>
@@ -219,6 +232,7 @@ const AboutUs = () => {
               target="_blank"
               rel="noreferrer"
               href="https://github.com/tig-o"
+              aria-label="Thiago Silveira GitHub Website"
             >
               <AiFillGithub />
             </a>
