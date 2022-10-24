@@ -6,6 +6,7 @@ import { useQuery, gql } from "@apollo/client";
 
 const BreweriesContainer = ({ location, radius, style, setBeers, setAddress, setName }) => {
   let selectedBreweries;
+  let noResults
 
   console.log(location, radius, style);
 
@@ -32,7 +33,7 @@ const BreweriesContainer = ({ location, radius, style, setBeers, setAddress, set
     }
   `;
 
-  const { data } = useQuery(GET_BREWERIES, {
+  const { data, loading } = useQuery(GET_BREWERIES, {
     variables: {
       location: location,
       radius: radius,
@@ -64,12 +65,16 @@ const BreweriesContainer = ({ location, radius, style, setBeers, setAddress, set
     console.log("Loading");
   }
 
+  if(!loading && data.breweries.length === 0) {
+    noResults = 'No results returned from your search. Please head back to the MaltFinder form and search again.'
+  }
+
   return (
     <div className="breweries-container">
       <div className="bars-image-container">
         <img src={bar} className="bars-image" alt="bar" />
         <div className="singles">
-          {/* add error handling for NO results. I came across a selction that didn't return any results. */}
+          {noResults && <p className='loadings-message'>{noResults}</p>}
           {selectedBreweries ? selectedBreweries : <Loading />}
         </div>
       </div>
