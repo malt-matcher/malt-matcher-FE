@@ -4,6 +4,9 @@ import cheers from "../../assets/cheers.webp";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
+
+  console.log(process.env.REACT_APP_MAPS_KEY)
+
   let greeting =
     "On the next page, enter your preferred beer style, the city you are in, and the radius you want the search to return. Then head to the brewery that features your favorite style!";
   return (
