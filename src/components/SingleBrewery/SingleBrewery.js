@@ -33,6 +33,7 @@ const SingleBrewery = ({
             target="_blank"
             rel="noreferrer"
             href={website}
+            aria-label={`${name} Website`}
           >
             {name}
           </a>
@@ -59,6 +60,7 @@ const SingleBrewery = ({
           target="_blank"
           rel="noreferrer"
           href={facebook}
+          aria-label={`${name} Facebook`}
         >
           <AiFillFacebook />
         </a>
@@ -67,6 +69,7 @@ const SingleBrewery = ({
           target="_blank"
           rel="noreferrer"
           href={instagram}
+          aria-label={`${name} Instagram`}
         >
           <AiFillInstagram />
         </a>
@@ -75,6 +78,7 @@ const SingleBrewery = ({
           target="_blank"
           rel="noreferrer"
           href={twitter}
+          aria-label={`${name} Twitter`}
         >
           <AiOutlineTwitter />
         </a>
