@@ -55,33 +55,45 @@ const SingleBrewery = ({
         </Link>
       </div>
       <div className="facebook-instagram-twitter">
-        <a
-          className="faceboodAnchor"
-          target="_blank"
-          rel="noreferrer"
-          href={facebook}
-          aria-label={`${name} Facebook`}
-        >
-          <AiFillFacebook />
-        </a>
-        <a
-          className="instagramAnchor"
-          target="_blank"
-          rel="noreferrer"
-          href={instagram}
-          aria-label={`${name} Instagram`}
-        >
-          <AiFillInstagram />
-        </a>
-        <a
-          className="twitterAnchor"
-          target="_blank"
-          rel="noreferrer"
-          href={twitter}
-          aria-label={`${name} Twitter`}
-        >
-          <AiOutlineTwitter />
-        </a>
+        {facebook ? (
+          <a
+            className="faceboodAnchor"
+            target="_blank"
+            rel="noreferrer"
+            href={facebook}
+            aria-label={`${name} Facebook`}
+          >
+            <AiFillFacebook />
+          </a>
+        ) : (
+          ""
+        )}
+        {instagram ? (
+          <a
+            className="instagramAnchor"
+            target="_blank"
+            rel="noreferrer"
+            href={instagram}
+            aria-label={`${name} Instagram`}
+          >
+            <AiFillInstagram />
+          </a>
+        ) : (
+          ""
+        )}
+        {twitter ? (
+          <a
+            className="twitterAnchor"
+            target="_blank"
+            rel="noreferrer"
+            href={twitter}
+            aria-label={`${name} Twitter`}
+          >
+            <AiOutlineTwitter />
+          </a>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
