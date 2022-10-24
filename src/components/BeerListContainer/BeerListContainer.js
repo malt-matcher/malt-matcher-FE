@@ -11,7 +11,8 @@ const BeerListContainer = ({ beerList, name }) => {
         ibu={brew.ibu}
         name={brew.name}
         style={brew.style}
-      />
+        key={brew.name}
+        />
     );
   });
 
