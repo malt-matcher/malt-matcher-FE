@@ -32,7 +32,6 @@ jobs:
 
 workflows:
   test_my_app:
-    build:
       jobs:
       - cypress/run
       - build_and_test
