@@ -35,207 +35,211 @@ const AboutUs = () => {
       </h1>
       <h2 className="developers">The Developers</h2>
       <div className="team-container">
-        <div className="member-container">
-          <div className="name-and-picture-container">
-            <div className="name-what-end-container">
-              <p className="name">Andrew Miller</p>
-              <p className="what-end">( FE )</p>
+        <div className="container-one">
+          <div className="member-container">
+            <div className="name-and-picture-container">
+              <div className="name-what-end-container">
+                <p className="name">Andrew Miller</p>
+                <p className="what-end">( FE )</p>
+              </div>
+              <img src={Andrew} alt="profile" className="profile" />
             </div>
-            <img src={Andrew} alt="profile" className="profile" />
+            <div className="linkedin-and-github">
+              <a
+                className="linkedinAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/andrew-miller-0393b448/"
+                aria-label="Andrew Miller LinkedIn Website"
+              >
+                <AiFillLinkedin />
+              </a>
+              <a
+                className="githubAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/andrewmiller45"
+                aria-label="Andrew Miller GitHub Website"
+              >
+                <AiFillGithub />
+              </a>
+            </div>
           </div>
-          <div className="linkedin-and-github">
-            <a
-              className="linkedinAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/andrew-miller-0393b448/"
-              aria-label="Andrew Miller LinkedIn Website"
-            >
-              <AiFillLinkedin />
-            </a>
-            <a
-              className="githubAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/andrewmiller45"
-              aria-label="Andrew Miller GitHub Website"
-            >
-              <AiFillGithub />
-            </a>
+          <div className="member-container">
+            <div className="name-and-picture-container">
+              <div className="name-what-end-container">
+                <p className="name">Bryan Shears</p>
+                <p className="what-end">( BE )</p>
+              </div>
+              <img src={Bryan} alt="profile" className="profile" />
+            </div>
+            <div className="linkedin-and-github">
+              <a
+                className="linkedinAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/bryan-shears/"
+                aria-label="Bryan Shears LinkedIn Website"
+              >
+                <AiFillLinkedin />
+              </a>
+              <a
+                className="githubAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/b-shears"
+                aria-label="Bryan Shears GitHub Website"
+              >
+                <AiFillGithub />
+              </a>
+            </div>
+          </div>
+          <div className="member-container">
+            <div className="name-and-picture-container">
+              <div className="name-what-end-container">
+                <p className="name">Bryce Simonds</p>
+                <p className="what-end">( BE )</p>
+              </div>
+              <img src={Bryce} alt="profile" className="profile" />
+            </div>
+            <div className="linkedin-and-github">
+              <a
+                className="linkedinAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/bryce-simonds/"
+                aria-label="Bryce Simonds LinkedIn Website"
+              >
+                <AiFillLinkedin />
+              </a>
+              <a
+                className="githubAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/brycesimonds"
+                aria-label="Bryce Simonds GitHub Website"
+              >
+                <AiFillGithub />
+              </a>
+            </div>
+          </div>
+          <div className="member-container">
+            <div className="name-and-picture-container">
+              <div className="name-what-end-container">
+                <p className="name">Cole Stephenson</p>
+                <p className="what-end">( FE )</p>
+              </div>
+              <img src={Cole} alt="profile" className="profile" />
+            </div>
+            <div className="linkedin-and-github">
+              <a
+                className="linkedinAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/cole-stephenson-99688a240/"
+                aria-label="Cole Stephenson LinkedIn Website"
+              >
+                <AiFillLinkedin />
+              </a>
+              <a
+                className="githubAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/colestephenson1"
+                aria-label="Cole Stephenson GitHub Website"
+              >
+                <AiFillGithub />
+              </a>
+            </div>
           </div>
         </div>
-        <div className="member-container">
-          <div className="name-and-picture-container">
-            <div className="name-what-end-container">
-              <p className="name">Bryan Shears</p>
-              <p className="what-end">( BE )</p>
+        <div className="container-two">
+          <div className="member-container">
+            <div className="name-and-picture-container">
+              <div className="name-what-end-container">
+                <p className="name">Jordan Farelli</p>
+                <p className="what-end">( FE )</p>
+              </div>
+              <img src={Jordan} alt="profile" className="profile" />
             </div>
-            <img src={Bryan} alt="profile" className="profile" />
-          </div>
-          <div className="linkedin-and-github">
-            <a
-              className="linkedinAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/bryan-shears/"
-              aria-label="Bryan Shears LinkedIn Website"
-            >
-              <AiFillLinkedin />
-            </a>
-            <a
-              className="githubAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/b-shears"
-              aria-label="Bryan Shears GitHub Website"
-            >
-              <AiFillGithub />
-            </a>
-          </div>
-        </div>
-        <div className="member-container">
-          <div className="name-and-picture-container">
-            <div className="name-what-end-container">
-              <p className="name">Bryce Simonds</p>
-              <p className="what-end">( BE )</p>
+            <div className="linkedin-and-github">
+              <a
+                className="linkedinAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/jordan-farelli/"
+                aria-label="Jordan Farelli LinkedIn Website"
+              >
+                <AiFillLinkedin />
+              </a>
+              <a
+                className="githubAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/jfarelli"
+                aria-label="Jordan Farelli GitHub Website"
+              >
+                <AiFillGithub />
+              </a>
             </div>
-            <img src={Bryce} alt="profile" className="profile" />
           </div>
-          <div className="linkedin-and-github">
-            <a
-              className="linkedinAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/bryce-simonds/"
-              aria-label="Bryce Simonds LinkedIn Website"
-            >
-              <AiFillLinkedin />
-            </a>
-            <a
-              className="githubAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/brycesimonds"
-              aria-label="Bryce Simonds GitHub Website"
-            >
-              <AiFillGithub />
-            </a>
-          </div>
-        </div>
-        <div className="member-container">
-          <div className="name-and-picture-container">
-            <div className="name-what-end-container">
-              <p className="name">Cole Stephenson</p>
-              <p className="what-end">( FE )</p>
+          <div className="member-container">
+            <div className="name-and-picture-container">
+              <div className="name-what-end-container">
+                <p className="name">Parker David Thompson</p>
+                <p className="what-end">( BE )</p>
+              </div>
+              <img src={Parker} alt="profile" className="profile" />
             </div>
-            <img src={Cole} alt="profile" className="profile" />
-          </div>
-          <div className="linkedin-and-github">
-            <a
-              className="linkedinAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/cole-stephenson-99688a240/"
-              aria-label="Cole Stephenson LinkedIn Website"
-            >
-              <AiFillLinkedin />
-            </a>
-            <a
-              className="githubAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/colestephenson1"
-              aria-label="Cole Stephenson GitHub Website"
-            >
-              <AiFillGithub />
-            </a>
-          </div>
-        </div>
-        <div className="member-container">
-          <div className="name-and-picture-container">
-            <div className="name-what-end-container">
-              <p className="name">Jordan Farelli</p>
-              <p className="what-end">( FE )</p>
+            <div className="linkedin-and-github">
+              <a
+                className="linkedinAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/parker-thomson-a15a68146/"
+                aria-label="Parker David Thompson LinkedIn Website"
+              >
+                <AiFillLinkedin />
+              </a>
+              <a
+                className="githubAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/pdthomson"
+                aria-label="Parker David Thompson GitHub Website"
+              >
+                <AiFillGithub />
+              </a>
             </div>
-            <img src={Jordan} alt="profile" className="profile" />
           </div>
-          <div className="linkedin-and-github">
-            <a
-              className="linkedinAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/jordan-farelli/"
-              aria-label="Jordan Farelli LinkedIn Website"
-            >
-              <AiFillLinkedin />
-            </a>
-            <a
-              className="githubAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/jfarelli"
-              aria-label="Jordan Farelli GitHub Website"
-            >
-              <AiFillGithub />
-            </a>
-          </div>
-        </div>
-        <div className="member-container">
-          <div className="name-and-picture-container">
-            <div className="name-what-end-container">
-              <p className="name">Parker David Thompson</p>
-              <p className="what-end">( BE )</p>
+          <div className="member-container">
+            <div className="name-and-picture-container">
+              <div className="name-what-end-container">
+                <p className="name">Thiago Silveira</p>
+                <p className="what-end">( BE )</p>
+              </div>
+              <img src={Thiago} alt="profile" className="profile" />
             </div>
-            <img src={Parker} alt="profile" className="profile" />
-          </div>
-          <div className="linkedin-and-github">
-            <a
-              className="linkedinAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/parker-thomson-a15a68146/"
-              aria-label="Parker David Thompson LinkedIn Website"
-            >
-              <AiFillLinkedin />
-            </a>
-            <a
-              className="githubAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/pdthomson"
-              aria-label="Parker David Thompson GitHub Website"
-            >
-              <AiFillGithub />
-            </a>
-          </div>
-        </div>
-        <div className="member-container">
-          <div className="name-and-picture-container">
-            <div className="name-what-end-container">
-              <p className="name">Thiago Silveira</p>
-              <p className="what-end">( BE )</p>
+            <div className="linkedin-and-github">
+              <a
+                className="linkedinAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/thiag-o/"
+                aria-label="Thiago Silveira LinkedIn Website"
+              >
+                <AiFillLinkedin />
+              </a>
+              <a
+                className="githubAnchor"
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/tig-o"
+                aria-label="Thiago Silveira GitHub Website"
+              >
+                <AiFillGithub />
+              </a>
             </div>
-            <img src={Thiago} alt="profile" className="profile" />
-          </div>
-          <div className="linkedin-and-github">
-            <a
-              className="linkedinAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/thiag-o/"
-              aria-label="Thiago Silveira LinkedIn Website"
-            >
-              <AiFillLinkedin />
-            </a>
-            <a
-              className="githubAnchor"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/tig-o"
-              aria-label="Thiago Silveira GitHub Website"
-            >
-              <AiFillGithub />
-            </a>
           </div>
         </div>
       </div>
