@@ -14,7 +14,9 @@ const BreweryDetails = ({ name, address }) => {
         title={name}
         allowFullScreen
         referrerPolicy="no-referrer-when-downgrade"
-        src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_MAPS_KEY}
+        src={`https://www.google.com/maps/embed/v1/place?key=${
+          process.env.REACT_APP_MAPS_KEY
+        }
           &q=${name + formattedAddress}`}
       ></iframe>
     </div>

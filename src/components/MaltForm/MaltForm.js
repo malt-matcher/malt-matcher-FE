@@ -88,9 +88,11 @@ const MaltForm = ({
       </div>
       <div className="button-container">
         <Link to="/search">
-          {style && location && radius ? <button className="form-button">
-            Show Me Breweries
-          </button> : ''}
+          {style && location && radius ? (
+            <button className="form-button">Show Me Breweries</button>
+          ) : (
+            ""
+          )}
         </Link>
       </div>
     </form>

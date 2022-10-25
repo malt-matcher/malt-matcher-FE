@@ -11,6 +11,7 @@
   width: 50vw;
   height: 70vh;
   justify-content: space-evenly;
+  text-shadow: 0 2px 7px #fff897;
 }
 
 .welcome {

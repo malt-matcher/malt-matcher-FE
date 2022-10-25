@@ -1,5 +1,9 @@
-img {
-  width: 100%;
+.profile {
+  box-shadow: 0 0 5px black;
+  float: left;
+  width: 14em;
+  height: 14em;
+  object-fit: cover;
 }
 
 .about-container {
@@ -21,31 +25,41 @@ img {
   margin-top: 10%;
   width: 75%;
   font-size: 2em;
-  transform: translateY(-133%);
+  transform: translateY(-128%);
   color: #fff897;
-  text-shadow: 0 6px 2px black;
+  text-shadow: 0 8px 2px black;
 }
 
 .developers {
-  color: #f28e1c;
-  transform: translateY(-9.5em);
+  color: #fff897;
+  transform: translateY(-11.75em);
   font-size: 50px;
-  text-shadow: 0 5px black;
-  background-color: black;
+  text-shadow: 0 5px 3px #624a2e;
+  background-color: #f28e1c;
   width: 50%;
   padding: 5px;
   border-radius: 10px;
-  border: inset 5px #fff897;
   box-shadow: 0 0 10px black;
 }
 
 .team-container {
-  display: grid;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: -23%;
-  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -37%;
+  margin-bottom: 1%;
   row-gap: 20px;
+}
+
+.container-one {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.container-two {
+  display: flex;
+  align-items: center;
 }
 
 .member-container {
@@ -53,13 +67,14 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 15px;
 }
 
 .name-and-picture-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 85%;
+  width: 98%;
 }
 
 .name-what-end-container {
@@ -71,13 +86,14 @@ img {
   margin-bottom: 7px;
   border-radius: 10px;
   box-shadow: 0 0 5px black;
-  width: 95%;
-  height: 3.25em;
+  width: 98%;
+  padding: 5px;
+  height: 2.5em;
   cursor: default;
 }
 
 .name {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color: #fff897;
   text-shadow: 0 2px #f28e1c;
@@ -86,7 +102,6 @@ img {
 }
 
 .what-end {
-  /* margin-bottom: 7px; */
   font-size: 15px;
   font-weight: bold;
   color: #fff897;
@@ -94,17 +109,12 @@ img {
   margin-top: 0;
 }
 
-.profile {
-  box-shadow: 0 0 5px black;
-  width: 95%;
-}
-
 .linkedin-and-github {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #624a2e;
-  width: 15%;
+  width: 25%;
   padding: 5px;
   border-radius: 10px;
   margin-top: 5px;

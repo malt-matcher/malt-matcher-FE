@@ -3,7 +3,13 @@ import bar from "../../assets/bar.jpg";
 import SingleBeer from "../SingleBeer/SingleBeer";
 import { Link } from "react-router-dom";
 
-const BeerListContainer = ({ beerList, name, setLocation, setRadius, setStyle }) => {
+const BeerListContainer = ({
+  beerList,
+  name,
+  setLocation,
+  setRadius,
+  setStyle,
+}) => {
   let selectedBrews = beerList.map((brew) => {
     return (
       <SingleBeer
@@ -12,15 +18,15 @@ const BeerListContainer = ({ beerList, name, setLocation, setRadius, setStyle })
         name={brew.name}
         style={brew.style}
         key={brew.name}
-        />
+      />
     );
   });
 
   const handleClick = () => {
-    setLocation('')
-    setRadius('')
-    setStyle('')
-  }
+    setLocation("");
+    setRadius("");
+    setStyle("");
+  };
 
   return (
     <div className="tap-listing-container">
@@ -31,7 +37,9 @@ const BeerListContainer = ({ beerList, name, setLocation, setRadius, setStyle })
         </div>
         <div className="back-and-details-button-container">
           <Link to="/maltfinder">
-            <button className="back-button" onClick={() => handleClick()}>Back To Search</button>
+            <button className="back-button" onClick={() => handleClick()}>
+              Back To Search
+            </button>
           </Link>
           <Link to="/details">
             <button className="brewery-details-button">
@@ -42,10 +50,7 @@ const BeerListContainer = ({ beerList, name, setLocation, setRadius, setStyle })
       </div>
       <div className="backdrop-image-container">
         <img src={bar} className="backdrop-image" alt="bar" />
-        <div className="single-beers">
-          {/* add error handling for NO results. I came across a selction that didn't return any results. */}
-          {selectedBrews}
-        </div>
+        <div className="single-beers">{selectedBrews}</div>
       </div>
     </div>
   );
