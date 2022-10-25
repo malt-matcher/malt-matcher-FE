@@ -8,8 +8,6 @@ const BreweriesContainer = ({ location, radius, style, setBeers, setAddress, set
   let selectedBreweries;
   let noResults
 
-  console.log(location, radius, style);
-
   const GET_BREWERIES = gql`
     query breweries($location: String!, $radius: String!, $style: String!) {
       breweries(location: $location, radius: $radius, style: $style) {
@@ -66,7 +64,7 @@ const BreweriesContainer = ({ location, radius, style, setBeers, setAddress, set
   }
 
   if(!loading && data.breweries.length === 0) {
-    noResults = 'No results returned from your search. Please head back to the MaltFinder form and search again.'
+    noResults = `No results matched your search! Click the MaltFinder icon and search again.`
   }
 
   return (
@@ -74,8 +72,8 @@ const BreweriesContainer = ({ location, radius, style, setBeers, setAddress, set
       <div className="bars-image-container">
         <img src={bar} className="bars-image" alt="bar" />
         <div className="singles">
-          {noResults && <p className='loadings-message'>{noResults}</p>}
           {selectedBreweries ? selectedBreweries : <Loading />}
+          {noResults && <p className='loading-message'>{noResults}</p>}
         </div>
       </div>
     </div>

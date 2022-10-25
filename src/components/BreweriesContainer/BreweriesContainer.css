@@ -13,6 +13,15 @@
   align-items: center;
 }
 
+.loading-message {
+  font-size: 1.75em;
+  text-shadow: 0 5px 5px #fff897;
+  font-weight: bold;
+  width: 90%;
+  transform: translateY(8.75em);
+  margin: 0;
+}
+
 .singles::-webkit-scrollbar {
   display: none;
 }
@@ -24,8 +33,7 @@
 .bars-image {
   height: 40em;
   width: 70em;
-  margin: auto;
-  margin-top: 8.55%;
+  margin-top: 9%;
   border-radius: 35px;
   opacity: 0.5;
   box-shadow: 0 0 10px black;
