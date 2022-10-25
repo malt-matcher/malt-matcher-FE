@@ -16,6 +16,24 @@ describe('Landing Page' , () => {
   })
 })
 
+describe('Data stub', () => {
+  it('should hit the API',() => {
+
+    cy.visit('http://localhost:3000/maltfinder')
+    cy.get('select[class=beer-style]').select('Lager')
+    cy.get('select[class=city]').select('Denver')
+    cy.get('select[class=radius]').select('50')
+    cy.intercept('POST', 'https://malt-matchers-be.herokuapp.com/graphql', (req) => {
+      if(req.body.operationName === 'breweries'){
+        req.alias = 'breweries'
+        req.continue()
+      }
+    })
+    cy.get('button').click()
+    cy.wait('@breweries')    
+    })
+})
+
 describe('Malt Form Page', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000/maltfinder')
@@ -28,11 +46,6 @@ describe('Malt Form Page', () => {
     cy.get('button').click()
     cy.url().should('eq', 'http://localhost:3000/search')
   })
-
-  //need to add a feature where all select drop down items are required.  I added 'required' to
-  //the `select` drop down - need to format the button to be unclickable until the fields are filled?  
-  //Easy fix.... too drunk to immediately solve right now 
-
 })
 
 describe('Loading view', () => {
@@ -44,9 +57,6 @@ describe('Loading view', () => {
     cy.get('p').contains('ferment')
   })
 })
-
-// we need to create a conditional render for queries that reuturn NO matches and send the user 
-// back to the search form!
 
 describe('Bad URL Message Page', () => {
   it('should display the error message page with a bad URL given', () => {
@@ -60,9 +70,9 @@ describe('Matching breweries!', () => {
     cy.visit('http://localhost:3000/maltfinder')
     cy.get('select[class=beer-style]').select('Lager')
     cy.get('select[class=city]').select('Denver')
-    cy.get('select[class=radius]').select('50').should('have.value', '50')
+    cy.get('select[class=radius]').select('50')
     cy.get('button').click()
-    cy.wait(35000)
+    cy.wait(5000)
   })
 
   it('display matching breweries', () => {
@@ -71,15 +81,14 @@ describe('Matching breweries!', () => {
     cy.get('.single-brewery-container').eq(2).contains('Denver')
   })
 
-  it('takes the user to a social media page of the brewery if you click on it', () => {
+  it.skip('takes the user to a social media page of the brewery if you click on it', () => {
     cy.get('.instagramAnchor').eq(0).click()
     // cy.url().should('eq', 'https://www.instagram.com/denverbeerco/')
-    //not sure how to make external url's pass in a cypress test.  Still very drunk
   })
 
   it('takes the user to the brewery\'s tap listings if you click on the tap listing button', () => {
     cy.get('button').eq(0).click()
-    cy.url().should('eq', 'http://localhost:3000/search/Denver%20Beer%20Company')
+    cy.url().should('eq', 'http://localhost:3000/search/Denver%20-%20Denver%20Beer%20Company')
   })
 })
 
@@ -88,9 +97,9 @@ describe('brewery tap list page', () => {
     cy.visit('http://localhost:3000/maltfinder')
     cy.get('select[class=beer-style]').select('Lager')
     cy.get('select[class=city]').select('Denver')
-    cy.get('select[class=radius]').select('50').should('have.value', '50')
+    cy.get('select[class=radius]').select('50')
     cy.get('button').click()
-    cy.wait(35000)
+    cy.wait(5000)
     cy.get('button').eq(0).click()
   })
 
@@ -100,22 +109,55 @@ describe('brewery tap list page', () => {
 
 })
 
-// describe('Malt Matcher Page', () => {
-//   beforeEach(() => {
-    //intercept will go here//
-    //reference https://www.youtube.com/watch?v=sTfmURpY20I for setup
-    // cy.intercept('POST', 'https://89c5da8f-5879-4c3a-959f-101eb08a1724.mock.pstmn.io/graphql', (req) => {
-    //   if(req.body.operationName === 'GET_BREWERIES'){
-    //     req.alias = 'GET_BREWERIES'
-    //     req.continue()
-    //   }
-    // })
-    // cy.visit('http://localhost:3000/maltfinder')
-    // cy.wait('@GET_BREWERIES')
-    // confirm that GET_BREWERIES is the operationName in the `Network` tab and adjust if needed.
-    
-    // cy.get('select[class=]').select('IPA') add classList to dropdowns
-    // cy.get('select[class=]').select('Littleton') add classList to dropdowns
-    // cy.get('select[class=]').select('5') add classList to dropdowns
-    // cy.get('button).click()
-  // })
+describe('user\'s taste is too narrow for the provided options (sad path)', () => {
+  it('should display text prompting hte user their taste is too picky' , () => {
+    cy.visit('http://localhost:3000/maltfinder')
+    cy.get('select[class=beer-style]').select('Saison')
+    cy.get('select[class=city]').select('Pueblo')
+    cy.get('select[class=radius]').select('5')
+    cy.get('button').click()
+    cy.get('p').should('contain', 'No results matched your search!')
+  })
+})
+
+describe('home button', () => {
+
+  it('takes user home from malt finder page', () =>{
+    cy.visit('http://localhost:3000/maltfinder')
+    cy.get('h1[class=malt]').click()
+    cy.url().should('eq', 'http://localhost:3000/')
+  })
+
+  it('takes user home from search page', () => {
+    cy.visit('http://localhost:3000/maltfinder')
+    cy.get('select[class=beer-style]').select('Lager')
+    cy.get('select[class=city]').select('Denver')
+    cy.get('select[class=radius]').select('50')
+    cy.get('button').click()
+    cy.get('h1[class=malt]').click()
+    cy.url().should('eq', 'http://localhost:3000/')
+  })
+
+  it('takes user home from tap list page', () => {
+    cy.visit('http://localhost:3000/maltfinder')
+    cy.get('select[class=beer-style]').select('Lager')
+    cy.get('select[class=city]').select('Denver')
+    cy.get('select[class=radius]').select('50')
+    cy.get('button').click()
+    cy.get('p[class=brewery-distance]').eq(0).click()
+    cy.get('h1[class=malt]').click()
+    cy.url().should('eq', 'http://localhost:3000/')
+  })
+
+  it('takes user home from directions page', () => {
+    cy.visit('http://localhost:3000/maltfinder')
+    cy.get('select[class=beer-style]').select('Lager')
+    cy.get('select[class=city]').select('Denver')
+    cy.get('select[class=radius]').select('50')
+    cy.get('button').click()
+    cy.get('button[class=show-beers-button]').eq(0).click()
+    cy.get('button[class=brewery-details-button]').click()
+    cy.get('h1[class=malt]').click()
+    cy.url().should('eq', 'http://localhost:3000/')
+  })
+})
