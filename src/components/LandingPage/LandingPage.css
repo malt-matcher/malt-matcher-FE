@@ -48,3 +48,7 @@
 .landing-page-home-button:active {
   box-shadow: 0 0 20px #624a2e;
 }
+
+.cheers-image {
+  box-shadow: 0 0 20px black;
+}
