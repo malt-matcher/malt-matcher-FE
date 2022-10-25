@@ -4,9 +4,16 @@ import SingleBrewery from "../SingleBrewery/SingleBrewery";
 import Loading from "../Loading/Loading";
 import { useQuery, gql } from "@apollo/client";
 
-const BreweriesContainer = ({ location, radius, style, setBeers, setAddress, setName }) => {
+const BreweriesContainer = ({
+  location,
+  radius,
+  style,
+  setBeers,
+  setAddress,
+  setName,
+}) => {
   let selectedBreweries;
-  let noResults
+  let noResults;
 
   const GET_BREWERIES = gql`
     query breweries($location: String!, $radius: String!, $style: String!) {
@@ -63,8 +70,8 @@ const BreweriesContainer = ({ location, radius, style, setBeers, setAddress, set
     console.log("Loading");
   }
 
-  if(!loading && data.breweries.length === 0) {
-    noResults = `No results matched your search! Click the MaltFinder icon and search again.`
+  if (!loading && data.breweries.length === 0) {
+    noResults = `No results matched your search! Click the MaltFinder icon and search again.`;
   }
 
   return (
@@ -73,7 +80,7 @@ const BreweriesContainer = ({ location, radius, style, setBeers, setAddress, set
         <img src={bar} className="bars-image" alt="bar" />
         <div className="singles">
           {selectedBreweries ? selectedBreweries : <Loading />}
-          {noResults && <p className='loading-message'>{noResults}</p>}
+          {noResults && <p className="loading-message">{noResults}</p>}
         </div>
       </div>
     </div>
