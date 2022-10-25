@@ -23,6 +23,7 @@
   width: 70em;
   border-radius: 35px;
   box-shadow: 0 0 10px black;
+  transform: translateY(-1%);
 }
 
 .home-button {

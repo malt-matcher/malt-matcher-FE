@@ -20,7 +20,7 @@
 
 ## <b>Deployed Page:</b>
 
-[Malt Matcher](https://mood-tunes.vercel.app/)
+[Malt Matcher](https://malt-matcher-fe.herokuapp.com/)
 
 <br>
 
