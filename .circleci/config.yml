@@ -3,6 +3,7 @@ version: 2.1
 orbs:
   node: circleci/node@4.7
   heroku: circleci/heroku@1.2.6 # Use the Heroku orb in your config
+  cypress: cypress-io/cypress@1
 
 jobs:
   build_and_test:
@@ -31,7 +32,8 @@ jobs:
 
 workflows:
   test_my_app:
-    jobs:
+      jobs:
+      - cypress/run
       - build_and_test
       - deploy:
           requires:
