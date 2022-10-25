@@ -72,7 +72,7 @@ describe('Matching breweries!', () => {
     cy.get('select[class=city]').select('Denver')
     cy.get('select[class=radius]').select('50')
     cy.get('button').click()
-    cy.wait(5000)
+    // cy.wait(5000)
   })
 
   it('display matching breweries', () => {
@@ -99,7 +99,7 @@ describe('brewery tap list page', () => {
     cy.get('select[class=city]').select('Denver')
     cy.get('select[class=radius]').select('50')
     cy.get('button').click()
-    cy.wait(5000)
+    // cy.wait(5000)
     cy.get('button').eq(0).click()
   })
 
@@ -117,6 +117,22 @@ describe('user\'s taste is too narrow for the provided options (sad path)', () =
     cy.get('select[class=radius]').select('5')
     cy.get('button').click()
     cy.get('p').should('contain', 'No results matched your search!')
+  })
+})
+
+describe('directions to brewery', () => {
+  beforeEach(()=> {
+    cy.visit('http://localhost:3000/maltfinder')
+    cy.get('select[class=beer-style]').select('Lager')
+    cy.get('select[class=city]').select('Denver')
+    cy.get('select[class=radius]').select('50')
+    cy.get('button').click()
+    cy.get('button[class=show-beers-button]').eq(0).click()
+    cy.get('button[class=brewery-details-button]').click()
+  })
+
+  it.skip('should display the map!', () => {
+  //not sure how to stub the api for google here
   })
 })
 
@@ -159,5 +175,21 @@ describe('home button', () => {
     cy.get('button[class=brewery-details-button]').click()
     cy.get('h1[class=malt]').click()
     cy.url().should('eq', 'http://localhost:3000/')
+  })
+})
+
+describe('about us', () => {
+  beforeEach(()=> {
+    cy.viewport(2000, 2000)
+    cy.visit('http://localhost:3000/')
+    cy.contains('About').click()
+  })
+
+  it('should populate a welcome text overview', () => {
+    cy.get('.about-text').should('contain', 'brain-child')
+  })
+
+  it('should display images of the team with names', () => {
+    cy.get('p[class=name]').eq(1).should('contain', 'Bryan Shears')
   })
 })
