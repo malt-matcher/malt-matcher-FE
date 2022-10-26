@@ -237,3 +237,6 @@ Cheers!</p>
 
 - Thiago Silveira:
   [LinkedIn](https://www.linkedin.com/in/thiag-o/) | [Github](https://github.com/tig-o)
+
+
+![IMG_20221017_145209](https://user-images.githubusercontent.com/97558758/198148114-30fb80d6-ac60-45e1-a8da-bfe4e3069d4d.jpg)
