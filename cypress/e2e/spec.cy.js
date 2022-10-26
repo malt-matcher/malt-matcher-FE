@@ -81,11 +81,6 @@ describe('Matching breweries!', () => {
     cy.get('.single-brewery-container').eq(2).contains('Denver')
   })
 
-  it.skip('takes the user to a social media page of the brewery if you click on it', () => {
-    cy.get('.instagramAnchor').eq(0).click()
-    // cy.url().should('eq', 'https://www.instagram.com/denverbeerco/')
-  })
-
   it('takes the user to the brewery\'s tap listings if you click on the tap listing button', () => {
     cy.get('button').eq(0).click()
     cy.url().should('eq', 'http://localhost:3000/search/Denver%20-%20Denver%20Beer%20Company')
@@ -131,8 +126,10 @@ describe('directions to brewery', () => {
     cy.get('button[class=brewery-details-button]').click()
   })
 
-  it.skip('should display the map!', () => {
-  //not sure how to stub the api for google here
+  it('should display the brewery and address!', () => {
+    cy.get('p[class=brewery-details-address]').should('contain' , '4455 Jason St, Denver, CO 80211')
+    cy.get('p[class=brewery-details-name').should('contain' , 'Denver - Denver Beer Company')
+    cy.get('.brew-map').should('exist')
   })
 })
 

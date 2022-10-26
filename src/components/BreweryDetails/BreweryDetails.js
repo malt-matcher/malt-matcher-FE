@@ -8,6 +8,7 @@ const BreweryDetails = ({ name, address }) => {
       <p className="brewery-details-name">{name}</p>
       <p className="brewery-details-address">{address}</p>
       <iframe
+        className="brew-map"
         width="600"
         height="450"
         loading="lazy"
