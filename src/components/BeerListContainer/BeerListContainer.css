@@ -56,7 +56,6 @@
 .on-tap-text {
   cursor: default;
   margin: 0;
-  /* margin-bottom: 5%; */
   font-size: 1.5em;
   font-variant: small-caps;
 }

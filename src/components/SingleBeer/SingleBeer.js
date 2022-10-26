@@ -1,6 +1,6 @@
 import "./SingleBeer.css";
 
-const SingleBeer = ({ abv, ibu, name, style }) => {
+const SingleBeer = ({ abv, name, style }) => {
   return (
     <div className="single-beer-container">
       <div className="single-beer-details-container">

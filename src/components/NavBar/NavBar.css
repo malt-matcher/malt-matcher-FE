@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   margin-left: 1%;
-  margin-top: -.5%;
+  margin-top: -0.5%;
   font-size: 20px;
   position: fixed;
   top: 0;
@@ -32,11 +32,10 @@
 .malt,
 .matcher {
   letter-spacing: 0.05em;
-  /* margin-top: 4%; */
   padding: 2px;
   color: #624a2e;
   font-variant: small-caps;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
 }
 
 .malt {
@@ -53,7 +52,7 @@
   text-decoration: none;
   transition: 0.2s;
   font-variant: small-caps;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
 }
 
 .about:focus {

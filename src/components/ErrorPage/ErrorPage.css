@@ -13,7 +13,8 @@
   text-shadow: 0 2px 3px #f28e1c;
 }
 
-.party-foul, .other-text {
+.party-foul,
+.other-text {
   margin: 0;
   font-size: 3.5em;
 }

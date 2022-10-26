@@ -14,7 +14,6 @@ const BeerListContainer = ({
     return (
       <SingleBeer
         abv={brew.abv}
-        ibu={brew.ibu}
         name={brew.name}
         style={brew.style}
         key={brew.name}
