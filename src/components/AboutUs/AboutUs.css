@@ -26,8 +26,8 @@
   width: 75%;
   font-size: 2em;
   transform: translateY(-128%);
-  color: #fff897;
-  text-shadow: 0 8px 2px black;
+  color: white;
+  text-shadow: 0 4px 4px black;
 }
 
 .developers {
