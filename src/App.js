@@ -52,6 +52,9 @@ function App() {
               setBeers={setBeers}
               setAddress={setAddress}
               setName={setName}
+              setLocation={setLocation}
+              setRadius={setRadius}
+              setStyle={setStyle}
             />
           )}
         />
