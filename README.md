@@ -28,7 +28,7 @@
 
 ## <b>Getting Started:</b>
 
-_To simply experience the application visit the link listed above_
+<!-- _To simply experience the application visit the link listed above_ -->
 
 _For the curious developer:_
 
@@ -92,7 +92,7 @@ https://user-images.githubusercontent.com/97558758/197641352-8e5aa317-0bc0-4ea3-
 
 No Results on Brewery Search:
 
-https://user-images.githubusercontent.com/97558758/198054728-ac120fd4-af48-4b9d-aa47-b4a2565438d1.mov
+https://user-images.githubusercontent.com/97558758/198124807-9905faac-89b5-466c-aad6-29b6b893b6b0.mov
 
 Bad URL:
 
