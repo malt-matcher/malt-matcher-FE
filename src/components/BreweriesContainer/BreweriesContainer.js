@@ -3,7 +3,7 @@ import bar from "../../assets/bar.jpg";
 import SingleBrewery from "../SingleBrewery/SingleBrewery";
 import Loading from "../Loading/Loading";
 import { useQuery, gql } from "@apollo/client";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const BreweriesContainer = ({
   location,
@@ -14,7 +14,7 @@ const BreweriesContainer = ({
   setName,
   setLocation,
   setRadius,
-  setStyle
+  setStyle,
 }) => {
   let selectedBreweries;
   let noResults;
@@ -90,7 +90,13 @@ const BreweriesContainer = ({
         <img src={bar} className="bars-image" alt="bar" />
         <div className="singles">
           {selectedBreweries ? selectedBreweries : <Loading />}
-          {noResults && <Link to='/maltfinder'><p className="loading-message" onClick={() => handleClick()}>{noResults}</p></Link> }
+          {noResults && (
+            <Link to="/maltfinder">
+              <p className="loading-message" onClick={() => handleClick()}>
+                {noResults}
+              </p>
+            </Link>
+          )}
         </div>
       </div>
     </div>

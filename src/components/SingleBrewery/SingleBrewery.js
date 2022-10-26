@@ -8,7 +8,6 @@ import {
 } from "react-icons/ai";
 
 const SingleBrewery = ({
-  id,
   name,
   distanceFromUser,
   address,
@@ -23,9 +22,6 @@ const SingleBrewery = ({
 }) => {
   return (
     <div className="single-brewery-container">
-      {/* <div className="brewery-image-container">
-        <img src={PBR} alt="beer" className="beer-image" />
-      </div> */}
       <div className="brewery-info-container">
         <p className="brewery-name">
           <a

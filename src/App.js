@@ -73,16 +73,10 @@ function App() {
         />
         <Route
           exact
-          // path="/details"
           path="/details"
           render={() => <BreweryDetails name={name} address={address} />}
         />
-        <Route
-          exact
-          path="/about"
-          // path='/:breweryLocations/:selectedBrewery/details'
-          render={() => <AboutUs />}
-        />
+        <Route exact path="/about" render={() => <AboutUs />} />
         <Route exact path="*" render={() => <ErrorPage />} />
       </Switch>
     </div>

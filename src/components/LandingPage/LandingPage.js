@@ -1,5 +1,4 @@
 import "./LandingPage.css";
-// import React from "react";
 import cheers from "../../assets/cheers.webp";
 import { Link } from "react-router-dom";
 
