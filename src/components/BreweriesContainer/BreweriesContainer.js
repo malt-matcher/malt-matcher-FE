@@ -76,8 +76,6 @@ const BreweriesContainer = ({
         />
       );
     });
-  } else {
-    console.log("Loading");
   }
 
   if (!loading && data.breweries.length === 0) {
