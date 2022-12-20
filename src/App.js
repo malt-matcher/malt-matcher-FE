@@ -17,7 +17,7 @@ function App() {
   const [beers, setBeers] = useState([]);
   const [address, setAddress] = useState("");
   const [name, setName] = useState("");
-
+console.log(process.env)
   return (
     <div className="App">
       <NavBar

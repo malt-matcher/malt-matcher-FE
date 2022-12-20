@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "https://malt-matchers-be.herokuapp.com/graphql",
+  uri: "https://malt-matcher-be.vercel.app/",
   cache: new InMemoryCache(),
 });
 
